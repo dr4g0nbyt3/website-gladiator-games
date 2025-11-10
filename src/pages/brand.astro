@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Brand Center - Gladiator Games" description="Brand guidelines and partnership information">
+  <Header />
+  <main class="bg-brand-black min-h-screen">
+    <section class="py-20 md:py-32">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 text-brand-white">Brand Center</h1>
+          <p class="text-xl text-brand-gray mb-8">
+            Guidelines for using the Gladiator Games brand
+          </p>
+
+          <div class="space-y-8">
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Our Mission</h2>
+              <p class="text-brand-gray mb-3">
+                <strong class="text-brand-white">Uniting Gamers</strong> to create thriving, meaningful communities.
+              </p>
+              <p class="text-brand-gray">
+                Providing every gamer with the ultimate battleground—premium equipment, unbeatable performance, and a community where skill meets opportunity.
+              </p>
+            </div>
+
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Brand Values</h2>
+              <ul class="space-y-3 text-brand-gray">
+                <li class="flex items-start">
+                  <span class="text-brand-orange-hover mr-2">•</span>
+                  <span><strong class="text-brand-white">Community First:</strong> Building connections between gamers</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-orange-hover mr-2">•</span>
+                  <span><strong class="text-brand-white">Excellence:</strong> Premium equipment and unbeatable performance</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-orange-hover mr-2">•</span>
+                  <span><strong class="text-brand-white">Inclusivity:</strong> Welcoming gamers of all skill levels</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-orange-hover mr-2">•</span>
+                  <span><strong class="text-brand-white">Competition:</strong> Fostering competitive spirit and sportsmanship</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Logo Usage</h2>
+              <div class="bg-brand-black p-8 rounded-lg border border-brand-gray-dark mb-4">
+                <img src="/images/branding/logo-white.png" alt="Gladiator Games Logo" class="w-full max-w-sm mx-auto" />
+              </div>
+              <div class="space-y-3 text-brand-gray">
+                <p><strong class="text-brand-white">Do:</strong> Use the logo on dark backgrounds with adequate spacing</p>
+                <p><strong class="text-brand-white">Don't:</strong> Alter, rotate, or change the colors of the logo</p>
+                <p><strong class="text-brand-white">Don't:</strong> Use the logo in a way that implies endorsement without permission</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Partnership Inquiries</h2>
+              <p class="text-brand-gray mb-4">
+                Interested in partnering with Gladiator Games? We're always looking for strategic partnerships that benefit our gaming community.
+              </p>
+              <div class="space-y-2 text-brand-gray">
+                <p><strong class="text-brand-white">Email:</strong> <a href="mailto:info@gladiatorgames.net" class="text-brand-orange hover:brightness-110 no-underline font-semibold">info@gladiatorgames.net</a></p>
+                <p><strong class="text-brand-white">Phone:</strong> <a href="tel:5736162779" class="text-brand-orange hover:brightness-110 no-underline font-semibold">(573) 616-2779</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 text-center">
+            <a href="/" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange">
+              Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

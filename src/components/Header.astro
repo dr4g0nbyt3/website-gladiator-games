@@ -1,0 +1,62 @@
+---
+const navItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Games', href: '/games' },
+  { name: 'Events', href: '/events' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Servers', href: '/servers' },
+  { name: 'Contact', href: '#contact' },
+];
+---
+
+<header id="main-header" class="bg-brand-black/40 backdrop-blur-2xl backdrop-saturate-150 border-b border-brand-gray-dark/30 sticky top-0 z-50 transition-all duration-300" style="backdrop-filter: blur(40px) saturate(180%); -webkit-backdrop-filter: blur(40px) saturate(180%);">
+  <nav class="container-custom py-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+        <a href="/" class="no-underline hover:opacity-80 transition-opacity">
+          <img src="/images/branding/logo-white.png" alt="Gladiator Games" class="h-12 md:h-16" />
+        </a>
+      </div>
+
+      <ul class="hidden md:flex space-x-8">
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="text-brand-white hover:text-brand-orange-hover transition-colors no-underline font-medium"
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- Mobile menu button -->
+      <button class="md:hidden text-brand-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Add scroll effect to header
+  let lastScroll = 0;
+  const header = document.getElementById('main-header');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 50) {
+      header?.classList.add('bg-brand-black/95');
+      header?.classList.add('shadow-lg');
+    } else {
+      header?.classList.remove('bg-brand-black/95');
+      header?.classList.remove('shadow-lg');
+    }
+
+    lastScroll = currentScroll;
+  });
+</script>

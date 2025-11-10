@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Media Kit - Gladiator Games" description="Press resources and brand assets for Gladiator Games">
+  <Header />
+  <main class="bg-brand-black min-h-screen">
+    <section class="py-20 md:py-32">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 text-brand-white">Media Kit</h1>
+          <p class="text-xl text-brand-gray mb-8">
+            Press resources, brand assets, and information for media professionals
+          </p>
+
+          <div class="space-y-8">
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">About Gladiator Games</h2>
+              <p class="text-brand-gray mb-4">
+                Gladiator Games is Jefferson City's premier gaming center, providing gamers with state-of-the-art equipment, competitive tournaments, and a thriving community. Located at Strikers, we offer unlimited gaming memberships, hourly rates, and host regular esports events.
+              </p>
+              <div class="grid md:grid-cols-3 gap-4 mt-6">
+                <div>
+                  <h3 class="text-brand-orange-hover font-semibold mb-1">Founded</h3>
+                  <p class="text-brand-gray">2024</p>
+                </div>
+                <div>
+                  <h3 class="text-brand-orange-hover font-semibold mb-1">Location</h3>
+                  <p class="text-brand-gray">Jefferson City, MO</p>
+                </div>
+                <div>
+                  <h3 class="text-brand-orange-hover font-semibold mb-1">Games</h3>
+                  <p class="text-brand-gray">100+ Titles</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Brand Assets</h2>
+              <p class="text-brand-gray mb-4">
+                Our logo and brand assets are available for press and promotional use. Please maintain proper spacing and do not alter the logo in any way.
+              </p>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-brand-black p-6 rounded-lg border border-brand-gray-dark">
+                  <img src="/images/branding/logo-white.png" alt="Gladiator Games Logo" class="w-full max-w-xs mx-auto mb-4" />
+                  <p class="text-sm text-brand-gray text-center">Logo (White)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Brand Colors</h2>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="text-center">
+                  <div class="w-full h-20 rounded-lg mb-2" style="background-color: #000000;"></div>
+                  <p class="text-sm text-brand-gray">#000000</p>
+                  <p class="text-xs text-brand-gray">Black</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-full h-20 rounded-lg mb-2" style="background-color: #cf2e2e;"></div>
+                  <p class="text-sm text-brand-gray">#cf2e2e</p>
+                  <p class="text-xs text-brand-gray">Red</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-full h-20 rounded-lg mb-2" style="background-color: #ff6900;"></div>
+                  <p class="text-sm text-brand-gray">#ff6900</p>
+                  <p class="text-xs text-brand-gray">Orange</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-full h-20 rounded-lg mb-2" style="background-color: #0693e3;"></div>
+                  <p class="text-sm text-brand-gray">#0693e3</p>
+                  <p class="text-xs text-brand-gray">Cyan</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Press Contact</h2>
+              <p class="text-brand-gray mb-4">
+                For press inquiries, interviews, or additional information:
+              </p>
+              <div class="space-y-2 text-brand-gray">
+                <p><strong class="text-brand-white">Email:</strong> <a href="mailto:info@gladiatorgames.net" class="text-brand-orange hover:brightness-110 no-underline font-semibold">info@gladiatorgames.net</a></p>
+                <p><strong class="text-brand-white">Phone:</strong> <a href="tel:5736162779" class="text-brand-orange hover:brightness-110 no-underline font-semibold">(573) 616-2779</a></p>
+                <p><strong class="text-brand-white">Address:</strong> 2017 Christy Dr., Jefferson City, MO 65101</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 text-center">
+            <a href="/" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange">
+              Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

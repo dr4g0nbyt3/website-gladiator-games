@@ -1,0 +1,76 @@
+---
+const games = [
+  {
+    name: 'Minecraft',
+    image: '/images/games/minecraft.webp',
+  },
+  {
+    name: 'Rocket League',
+    image: '/images/games/rocket-league.webp',
+  },
+  {
+    name: 'Valorant',
+    image: '/images/games/valorant.webp',
+  },
+  {
+    name: 'League of Legends',
+    image: '/images/games/league-of-legends.webp',
+  },
+  {
+    name: 'Apex Legends',
+    image: '/images/games/apex-legends.webp',
+  },
+  {
+    name: 'Dota 2',
+    image: '/images/games/dota-2.webp',
+  },
+  {
+    name: 'Counter-Strike',
+    image: '/images/games/counterstrike.webp',
+  },
+  {
+    name: 'Fortnite',
+    image: '/images/games/fortnite.webp',
+  },
+];
+---
+
+<section id="games" class="py-16 md:py-24 bg-brand-black">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">100+ Games Available</h2>
+      <p class="text-brand-gray text-lg mb-4">
+        From competitive esports to casual favorites, we have every game you want to play
+      </p>
+      <a href="/games" class="text-brand-orange hover:brightness-110 no-underline font-semibold inline-flex items-center">
+        View All Games
+        <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {games.map((game) => (
+        <a href={`/games/${game.name.toLowerCase().replace(/\s+/g, '-').replace(/:/g, '')}`} class="card group cursor-pointer hover:border-2 hover:border-brand-orange-hover transition-all transform hover:scale-105 bg-brand-black no-underline">
+          <div class="aspect-square w-full mb-3 overflow-hidden rounded-lg">
+            <img
+              src={game.image}
+              alt={game.name}
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+            />
+          </div>
+          <h3 class="text-base md:text-lg font-bold text-center text-brand-white group-hover:text-brand-orange-hover transition-colors">
+            {game.name}
+          </h3>
+        </a>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/games" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange">
+        View All 100+ Games
+      </a>
+    </div>
+  </div>
+</section>

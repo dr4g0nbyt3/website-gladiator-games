@@ -1,0 +1,78 @@
+---
+const faqs = [
+  {
+    question: "What are your pricing options?",
+    answer: "We offer flexible pricing to fit your gaming style: $32/month for unlimited gaming with our membership, $10/hour for drop-in gaming, or $20 for a full-day pass. Members get unlimited play time and access to exclusive events!"
+  },
+  {
+    question: "What kind of equipment do you have?",
+    answer: "Our gaming stations feature mid to high-end gaming PCs with RTX 3060-4070 graphics cards, ensuring smooth performance for all modern games. All stations include high-refresh-rate monitors, gaming keyboards, mice, and headsets."
+  },
+  {
+    question: "Do I need to make a reservation?",
+    answer: "Walk-ins are always welcome! While reservations aren't required, you can contact us to check availability during peak hours or book a station in advance for groups and events."
+  },
+  {
+    question: "What's your age policy?",
+    answer: "Gamers 16 and older can visit solo. Anyone under 16 must be accompanied by a parent or guardian. We're a welcoming, family-friendly environment for gamers of all skill levels."
+  },
+  {
+    question: "Can I bring my own keyboard, mouse, or headset?",
+    answer: "Absolutely! You're welcome to bring your own peripherals if you prefer your personal setup. We want you to game at your best."
+  },
+  {
+    question: "What about food and drinks?",
+    answer: "Gladiator Games is located at Strikers, which offers a full menu of delicious food and drinks. Check out their <a href='https://www.strikersjc.com/eat' target='_blank' rel='noopener noreferrer' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>food menu</a> and <a href='https://www.strikersjc.com/drink' target='_blank' rel='noopener noreferrer' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>drink menu</a> to see what's available. You can enjoy snacks, meals, and beverages while you game. Outside food and drinks are not permitted."
+  },
+  {
+    question: "Do you host tournaments and events?",
+    answer: "Yes! We regularly host tournaments and special gaming events like our Retro Night. Follow us on social media or check our Events section to stay updated on upcoming competitions and community gatherings."
+  },
+  {
+    question: "Do you offer gaming coaching or lessons?",
+    answer: "Yes, we offer coaching for various competitive games. Contact us at info@gladiatorgames.net or call (573) 338-1481 to inquire about available games, schedules, and rates."
+  },
+  {
+    question: "Can I book a private party or group event?",
+    answer: "Absolutely! We have private party rooms available for birthdays, team events, and group gaming sessions. Contact us to discuss your event needs and book your space."
+  },
+  {
+    question: "What games can I play?",
+    answer: "We have over 100 games in our library! This includes popular titles like Minecraft, Rocket League, Valorant, League of Legends, Apex Legends, Dota 2, Counter-Strike, Fortnite, and many more. If there's a specific game you're looking for, just ask!"
+  }
+];
+---
+
+<section id="faq" class="py-16 md:py-24 bg-brand-black">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+      <p class="text-brand-gray text-lg">
+        Everything you need to know about gaming at Gladiator Games
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-4">
+      {faqs.map((faq, index) => (
+        <details class="group bg-brand-gray-dark rounded-lg overflow-hidden border border-brand-gray-dark hover:border-brand-orange-hover transition-colors">
+          <summary class="cursor-pointer p-6 flex items-center justify-between font-semibold text-brand-white text-lg hover:text-brand-orange-hover transition-colors">
+            <span class="pr-8">{faq.question}</span>
+            <svg class="w-5 h-5 flex-shrink-0 transform group-open:rotate-180 transition-transform text-brand-orange-hover" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-brand-gray leading-relaxed">
+            <Fragment set:html={faq.answer} />
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <p class="text-brand-gray mb-4">Still have questions?</p>
+      <a href="#contact" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>

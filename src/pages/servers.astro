@@ -1,0 +1,222 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Game Servers - Gladiator Games"
+  description="Join our exclusive Minecraft server and stay tuned for more! Private servers for the Gladiator Games community in Jefferson City. Rust and Terraria coming soon!"
+>
+  <Header />
+  <main class="bg-brand-black min-h-screen">
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 bg-gradient-to-b from-brand-gray-dark to-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 text-brand-white">
+            Game Servers
+          </h1>
+          <p class="text-xl text-brand-gray mb-8">
+            Join our community-run game servers and play with fellow Gladiator Games members
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Active Servers -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-brand-white">Active Servers</h2>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <!-- Minecraft Server -->
+            <div class="card border-brand-orange">
+              <div class="flex items-start justify-between mb-4">
+                <div>
+                  <h3 class="text-2xl font-bold text-brand-white mb-2">Minecraft Server</h3>
+                  <span class="inline-block bg-green-500/20 text-green-500 px-3 py-1 rounded-full text-sm font-semibold">
+                    ● ONLINE
+                  </span>
+                </div>
+              </div>
+              <div class="space-y-2 text-brand-gray mb-4">
+                <p class="flex items-center">
+                  <svg class="w-5 h-5 mr-2 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                  </svg>
+                  <strong class="text-brand-white mr-2">IP:</strong> mc.gladiatorgames.net
+                </p>
+                <p class="flex items-center">
+                  <svg class="w-5 h-5 mr-2 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                  </svg>
+                  <strong class="text-brand-white mr-2">Version:</strong> 1.20.4
+                </p>
+              </div>
+              <p class="text-brand-gray mb-4">
+                Survival mode with custom plugins, economy system, and land protection. Join our thriving community!
+              </p>
+              <div class="flex gap-2">
+                <button class="btn-primary bg-brand-orange hover:brightness-110 flex-1" onclick="navigator.clipboard.writeText('mc.gladiatorgames.net')">
+                  Copy IP
+                </button>
+                <a href="https://discord.gg/PaHrQj2yzv" target="_blank" rel="noopener noreferrer" class="btn-primary bg-brand-gray-dark hover:bg-brand-gray flex-1 text-center">
+                  Join Discord
+                </a>
+              </div>
+            </div>
+
+            <!-- Rust Server -->
+            <div class="card border-brand-gray-dark opacity-75">
+              <div class="flex items-start justify-between mb-4">
+                <div>
+                  <h3 class="text-2xl font-bold text-brand-white mb-2">Rust Server</h3>
+                  <span class="inline-block bg-yellow-500/20 text-yellow-500 px-3 py-1 rounded-full text-sm font-semibold">
+                    COMING SOON
+                  </span>
+                </div>
+              </div>
+              <p class="text-brand-gray mb-4">
+                Our Rust community server is currently in development. Stay tuned for launch details!
+              </p>
+              <a href="https://discord.gg/PaHrQj2yzv" target="_blank" rel="noopener noreferrer" class="btn-primary bg-brand-gray-dark hover:bg-brand-gray w-full text-center">
+                Get Notified
+              </a>
+            </div>
+
+            <!-- Terraria Server -->
+            <div class="card border-brand-gray-dark opacity-75">
+              <div class="flex items-start justify-between mb-4">
+                <div>
+                  <h3 class="text-2xl font-bold text-brand-white mb-2">Terraria Server</h3>
+                  <span class="inline-block bg-yellow-500/20 text-yellow-500 px-3 py-1 rounded-full text-sm font-semibold">
+                    COMING SOON
+                  </span>
+                </div>
+              </div>
+              <p class="text-brand-gray mb-4">
+                Our Terraria community server is currently in development. Stay tuned for launch details!
+              </p>
+              <a href="https://discord.gg/PaHrQj2yzv" target="_blank" rel="noopener noreferrer" class="btn-primary bg-brand-gray-dark hover:bg-brand-gray w-full text-center">
+                Get Notified
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Server Rules -->
+    <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-brand-white text-center">Server Rules</h2>
+
+          <div class="card">
+            <ul class="space-y-4 text-brand-gray">
+              <li class="flex items-start">
+                <span class="text-brand-orange mr-3 text-xl">1.</span>
+                <div>
+                  <strong class="text-brand-white">Be Respectful:</strong> No harassment, hate speech, or toxic behavior. Treat all players with respect.
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-orange mr-3 text-xl">2.</span>
+                <div>
+                  <strong class="text-brand-white">No Cheating:</strong> Hacks, exploits, and glitches are strictly prohibited. Play fair.
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-orange mr-3 text-xl">3.</span>
+                <div>
+                  <strong class="text-brand-white">Follow Server-Specific Rules:</strong> Each server may have additional rules posted in Discord.
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-orange mr-3 text-xl">4.</span>
+                <div>
+                  <strong class="text-brand-white">No Griefing:</strong> Destroying other players' work for no reason is not allowed.
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-orange mr-3 text-xl">5.</span>
+                <div>
+                  <strong class="text-brand-white">Report Issues:</strong> Contact admins on Discord if you encounter problems or rule violations.
+                </div>
+              </li>
+            </ul>
+            <p class="text-brand-gray mt-6 text-sm italic">
+              Violations may result in temporary or permanent bans at admin discretion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Server Benefits -->
+    <section class="py-16 bg-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6 text-brand-white">Why Join Our Servers?</h2>
+          <div class="grid md:grid-cols-3 gap-6 text-left">
+            <div class="card">
+              <div class="w-12 h-12 bg-brand-orange/20 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-brand-white">High Performance</h3>
+              <p class="text-brand-gray text-sm">
+                Dedicated servers with low latency and 99.9% uptime for smooth gameplay
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="w-12 h-12 bg-brand-purple/20 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-brand-white">Active Community</h3>
+              <p class="text-brand-gray text-sm">
+                Play with members you know from the gaming center and make new friends
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="w-12 h-12 bg-brand-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-brand-white">Moderated</h3>
+              <p class="text-brand-gray text-sm">
+                Active admins and clear rules ensure a fair and enjoyable experience for everyone
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-gradient-to-b from-brand-gray-dark to-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6 text-brand-white">
+            Join Our Gaming Community
+          </h2>
+          <p class="text-xl text-brand-gray mb-8">
+            Get server updates, event notifications, and connect with other players on Discord
+          </p>
+          <a href="https://discord.gg/PaHrQj2yzv" target="_blank" rel="noopener noreferrer" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange">
+            Join Discord Server
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

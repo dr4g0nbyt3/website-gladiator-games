@@ -1,0 +1,66 @@
+---
+const partners = [
+  {
+    name: 'Toxic Tournaments',
+    logo: '/images/partners/toxic-tournaments.png',
+    url: 'https://toxictournaments.com/',
+    size: 'normal',
+  },
+  {
+    name: 'League of Honorable Players',
+    logo: '/images/partners/league-of-her-own.png',
+    url: '',
+    size: 'large', // Double size
+  },
+  {
+    name: 'Sports Crusaders',
+    logo: '/images/partners/sports-crusaders.png',
+    url: 'https://sportscrusaders.org/',
+    size: 'normal',
+  },
+  {
+    name: 'Strikers',
+    logo: '/images/partners/strikers.webp',
+    url: 'https://www.strikersjc.com',
+    size: 'normal',
+  },
+];
+---
+
+<section id="partners" class="py-16 md:py-24 bg-brand-black">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Partners</h2>
+      <p class="text-brand-gray text-lg">
+        Proud to work with leading gaming organizations
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+      {partners.map((partner) => {
+        const content = (
+          <img
+            src={partner.logo}
+            alt={partner.name}
+            class={`w-full h-auto object-contain ${partner.size === 'large' ? 'max-h-32' : 'max-h-24'} filter brightness-100 hover:brightness-110 transition-all`}
+          />
+        );
+
+        return partner.url ? (
+          <a
+            href={partner.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center p-8 bg-brand-gray-dark rounded-lg hover:bg-[#ff8044]/20 hover:border-2 hover:border-[#ff8044] transition-all no-underline h-48"
+          >
+            {content}
+          </a>
+        ) : (
+          <div class="flex flex-col items-center justify-center p-8 bg-brand-gray-dark rounded-lg h-48">
+            {content}
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

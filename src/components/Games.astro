@@ -61,11 +61,11 @@ const games = [
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {games.map((game) => (
         <a href={`/games/${game.slug}`} class="card group cursor-pointer hover:border-2 hover:border-brand-orange-hover transition-all transform hover:scale-105 bg-brand-black no-underline">
-          <div class="aspect-square w-full mb-3 overflow-hidden rounded-lg">
+          <div class="aspect-square w-full mb-3 overflow-hidden rounded-lg bg-brand-gray-dark flex items-center justify-center">
             <img
               src={game.image}
               alt={game.name}
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
             />
           </div>
           <h3 class="text-base md:text-lg font-bold text-center text-brand-white group-hover:text-brand-orange-hover transition-colors">

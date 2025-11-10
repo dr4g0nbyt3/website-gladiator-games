@@ -66,11 +66,11 @@ const categories = Object.keys(gamesByCategory).sort();
                     data-game-name={game.name.toLowerCase()}
                   >
                     {gameImage ? (
-                      <div class="aspect-video w-full overflow-hidden">
+                      <div class="aspect-video w-full overflow-hidden bg-brand-gray-dark flex items-center justify-center">
                         <img
                           src={gameImage}
                           alt={game.name}
-                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           loading="lazy"
                         />
                       </div>

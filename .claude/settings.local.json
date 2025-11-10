@@ -23,7 +23,10 @@
       "WebFetch(domain:www.riotgames.com)",
       "WebFetch(domain:store.steampowered.com)",
       "WebFetch(domain:vercel.com)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

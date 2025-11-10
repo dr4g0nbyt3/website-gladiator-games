@@ -2,34 +2,42 @@
 const games = [
   {
     name: 'Minecraft',
+    slug: 'minecraft',
     image: '/images/games/minecraft.webp',
   },
   {
     name: 'Rocket League',
+    slug: 'rocket-league',
     image: '/images/games/rocket-league.webp',
   },
   {
     name: 'Valorant',
+    slug: 'valorant',
     image: '/images/games/valorant.webp',
   },
   {
     name: 'League of Legends',
+    slug: 'league-of-legends',
     image: '/images/games/league-of-legends.webp',
   },
   {
     name: 'Apex Legends',
+    slug: 'apex-legends',
     image: '/images/games/apex-legends.webp',
   },
   {
     name: 'Dota 2',
+    slug: 'dota-2',
     image: '/images/games/dota-2.webp',
   },
   {
-    name: 'Counter-Strike',
+    name: 'Counter-Strike 2',
+    slug: 'counter-strike-2',
     image: '/images/games/counterstrike.webp',
   },
   {
     name: 'Fortnite',
+    slug: 'fortnite',
     image: '/images/games/fortnite.webp',
   },
 ];
@@ -52,7 +60,7 @@ const games = [
 
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {games.map((game) => (
-        <a href={`/games/${game.name.toLowerCase().replace(/\s+/g, '-').replace(/:/g, '')}`} class="card group cursor-pointer hover:border-2 hover:border-brand-orange-hover transition-all transform hover:scale-105 bg-brand-black no-underline">
+        <a href={`/games/${game.slug}`} class="card group cursor-pointer hover:border-2 hover:border-brand-orange-hover transition-all transform hover:scale-105 bg-brand-black no-underline">
           <div class="aspect-square w-full mb-3 overflow-hidden rounded-lg">
             <img
               src={game.image}

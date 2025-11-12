@@ -7,7 +7,7 @@ import Footer from '../components/Footer.astro';
 <Layout title="Careers - Gladiator Games" description="Join the Gladiator Games team and help build the ultimate gaming community">
   <Header />
   <main class="bg-brand-black min-h-screen">
-    <section class="py-20 md:py-32">
+    <section class="py-20 md:py-32 bg-gradient-to-b from-brand-black to-brand-gray-dark">
       <div class="container-custom">
         <div class="max-w-4xl mx-auto">
           <h1 class="text-4xl md:text-5xl font-bold mb-6 text-brand-white">Join Our Team</h1>
@@ -49,9 +49,9 @@ import Footer from '../components/Footer.astro';
               </p>
               <ul class="space-y-2 text-brand-gray mb-6">
                 <li>• Gaming Attendants</li>
-                <li>• Tournament Coordinators</li>
+                <li>• <a href="/events" class="text-brand-orange hover:brightness-110 no-underline font-semibold">Tournament Coordinators</a></li>
                 <li>• Technical Support</li>
-                <li>• Event Hosts</li>
+                <li>• <a href="/events" class="text-brand-orange hover:brightness-110 no-underline font-semibold">Event Hosts</a></li>
               </ul>
             </div>
 
@@ -63,7 +63,7 @@ import Footer from '../components/Footer.astro';
               <div class="space-y-2 text-brand-gray">
                 <p><strong class="text-brand-white">Email:</strong> <a href="mailto:info@gladiatorgames.net" class="text-brand-orange hover:brightness-110 no-underline font-semibold">info@gladiatorgames.net</a></p>
                 <p><strong class="text-brand-white">Phone:</strong> <a href="tel:5736162779" class="text-brand-orange hover:brightness-110 no-underline font-semibold">(573) 616-2779</a></p>
-                <p><strong class="text-brand-white">Visit:</strong> Stop by in person at 2017 Christy Dr., Jefferson City, MO 65101</p>
+                <p><strong class="text-brand-white">Visit:</strong> <a href="/contact" class="text-brand-orange hover:brightness-110 no-underline font-semibold">Stop by in person</a> at 2017 Christy Dr., Jefferson City, MO 65101</p>
               </div>
             </div>
           </div>

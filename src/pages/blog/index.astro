@@ -1,0 +1,219 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const articles = [
+  {
+    title: 'How to Go Pro in League of Legends',
+    description: 'Learn how to become a professional League of Legends player with our comprehensive guide. Discover training strategies, rank climbing tips, and the path to esports success.',
+    url: '/blog/how-to-go-pro-in-league-of-legends',
+    game: 'League of Legends',
+    readTime: '15 min read',
+  },
+  {
+    title: 'How to Go Pro in Valorant',
+    description: 'Master Valorant and reach Radiant with our complete pro player guide. Learn aim training, agent strategies, competitive tactics, and the path to esports.',
+    url: '/blog/how-to-go-pro-in-valorant',
+    game: 'Valorant',
+    readTime: '14 min read',
+  },
+  {
+    title: 'How to Go Pro in Counter-Strike 2',
+    description: 'Master CS2 and reach the professional level with our complete guide. Learn aim, tactics, economy, and the path from matchmaking to tier-1 esports.',
+    url: '/blog/how-to-go-pro-in-counter-strike-2',
+    game: 'Counter-Strike 2',
+    readTime: '16 min read',
+  },
+  {
+    title: 'How to Go Pro in Dota 2',
+    description: 'Learn how to become a professional Dota 2 player with our comprehensive guide. Master mechanics, game knowledge, and the path to The International.',
+    url: '/blog/how-to-go-pro-in-dota-2',
+    game: 'Dota 2',
+    readTime: '17 min read',
+  },
+  {
+    title: 'How to Go Pro in Apex Legends',
+    description: 'Master Apex Legends and reach ALGS with our complete pro player guide. Learn movement, gunplay, competitive strategies, and the path to professional play.',
+    url: '/blog/how-to-go-pro-in-apex-legends',
+    game: 'Apex Legends',
+    readTime: '15 min read',
+  },
+  {
+    title: 'How to Go Pro in Rocket League',
+    description: 'Master Rocket League and reach RLCS with our complete guide. Learn mechanics, positioning, rotation, and the path to professional car soccer.',
+    url: '/blog/how-to-go-pro-in-rocket-league',
+    game: 'Rocket League',
+    readTime: '16 min read',
+  },
+];
+---
+
+<Layout
+  title="Pro Gaming Guides - Learn How to Go Pro | Gladiator Games Blog"
+  description="Comprehensive guides on how to become a professional esports player. Learn training strategies, ranking tips, and competitive pathways for top games."
+>
+  <Header />
+  <main class="bg-brand-black min-h-screen">
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 bg-gradient-to-b from-brand-gray-dark to-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 text-brand-white">
+            Pro Gaming Guides
+          </h1>
+          <p class="text-xl md:text-2xl text-brand-gray mb-8">
+            Master your game and learn the path to professional esports with our comprehensive guides
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {articles.map((article) => (
+              <a
+                href={article.url}
+                class="card hover:border-brand-orange transition-all duration-300 hover:shadow-lg hover:shadow-brand-orange/20 no-underline group"
+              >
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-brand-orange font-semibold text-sm">{article.game}</span>
+                  <span class="text-brand-gray text-sm">{article.readTime}</span>
+                </div>
+                <h2 class="text-2xl font-bold mb-3 text-brand-white group-hover:text-brand-orange transition-colors">
+                  {article.title}
+                </h2>
+                <p class="text-brand-gray mb-4 leading-relaxed">
+                  {article.description}
+                </p>
+                <div class="flex items-center text-brand-orange font-semibold">
+                  Read Guide
+                  <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Content Section -->
+    <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="card">
+            <h2 class="text-3xl font-bold mb-6 text-brand-white text-center">
+              Your Path to Professional Gaming
+            </h2>
+            <div class="space-y-6 text-brand-gray">
+              <p class="text-lg leading-relaxed">
+                Going pro in esports requires dedication, strategic practice, and the right environment. Our comprehensive guides cover everything from fundamental mechanics to professional networking, giving you the complete roadmap to competitive success.
+              </p>
+              <p class="text-lg leading-relaxed">
+                Each guide is tailored to the specific requirements of its game, covering:
+              </p>
+              <ul class="space-y-3 ml-6">
+                <li class="flex items-start">
+                  <span class="text-brand-orange mr-3 mt-1">•</span>
+                  <span><strong class="text-brand-white">Core Mechanics:</strong> Master the fundamental skills that every pro player has perfected</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-orange mr-3 mt-1">•</span>
+                  <span><strong class="text-brand-white">Ranking Systems:</strong> Understand the path from beginner to professional ranks</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-orange mr-3 mt-1">•</span>
+                  <span><strong class="text-brand-white">Training Routines:</strong> Daily practice schedules used by professional players</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-orange mr-3 mt-1">•</span>
+                  <span><strong class="text-brand-white">Competitive Pathways:</strong> How to break into tournaments and find teams</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-orange mr-3 mt-1">•</span>
+                  <span><strong class="text-brand-white">Equipment & Setup:</strong> The hardware professionals use to gain competitive advantages</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-b from-brand-gray-dark to-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="card bg-gradient-to-r from-brand-orange/10 to-brand-purple/10 border-brand-orange text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-brand-white">
+              Ready to Level Up Your Game?
+            </h2>
+            <p class="text-xl text-brand-gray mb-8">
+              Practice on professional-grade equipment and compete in local tournaments at Gladiator Games in Jefferson City
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange text-center">
+                Visit Our Arena
+              </a>
+              <a href="/events" class="btn-primary bg-brand-black border-2 border-brand-orange-hover text-brand-orange-hover hover:bg-brand-orange-hover hover:text-brand-white text-center">
+                View Tournaments
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Practice at Gladiator Games -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl font-bold mb-12 text-brand-white text-center">
+            Why Train at Gladiator Games?
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="card text-center">
+              <div class="text-brand-orange mb-4">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-brand-white">Professional Equipment</h3>
+              <p class="text-brand-gray">
+                240Hz monitors, high-end gaming PCs, professional peripherals, and fiber internet - eliminate hardware as an excuse
+              </p>
+            </div>
+            <div class="card text-center">
+              <div class="text-brand-orange mb-4">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-brand-white">Competitive Community</h3>
+              <p class="text-brand-gray">
+                Connect with other competitive players, find teammates, and participate in local tournaments and events
+              </p>
+            </div>
+            <div class="card text-center">
+              <div class="text-brand-orange mb-4">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-brand-white">Optimal Performance</h3>
+              <p class="text-brand-gray">
+                Low latency, high FPS, and zero distractions - experience gaming the way professionals do and maximize your improvement
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

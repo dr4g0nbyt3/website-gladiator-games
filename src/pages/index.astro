@@ -19,6 +19,28 @@ import Footer from '../components/Footer.astro';
     <Events />
     <Partners />
     <FAQ />
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-brand-white">
+            Ready to Play?
+          </h2>
+          <p class="text-xl text-brand-gray mb-8">
+            Visit us today and experience the ultimate gaming center in Jefferson City
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange">
+              Visit Us Today
+            </a>
+            <a href="#membership" class="btn-primary bg-brand-black border-2 border-brand-orange-hover text-brand-orange-hover hover:bg-brand-orange-hover hover:text-brand-white">
+              View Membership
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <Footer />
 </Layout>

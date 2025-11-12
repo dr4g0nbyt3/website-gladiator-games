@@ -7,7 +7,7 @@ import Footer from '../components/Footer.astro';
 <Layout title="Media Kit - Gladiator Games" description="Press resources and brand assets for Gladiator Games">
   <Header />
   <main class="bg-brand-black min-h-screen">
-    <section class="py-20 md:py-32">
+    <section class="py-20 md:py-32 bg-gradient-to-b from-brand-black to-brand-gray-dark">
       <div class="container-custom">
         <div class="max-w-4xl mx-auto">
           <h1 class="text-4xl md:text-5xl font-bold mb-6 text-brand-white">Media Kit</h1>
@@ -19,7 +19,7 @@ import Footer from '../components/Footer.astro';
             <div class="card">
               <h2 class="text-2xl font-bold mb-4 text-brand-white">About Gladiator Games</h2>
               <p class="text-brand-gray mb-4">
-                Gladiator Games is Jefferson City's premier gaming center, providing gamers with state-of-the-art equipment, competitive tournaments, and a thriving community. Located at Strikers, we offer unlimited gaming memberships, hourly rates, and host regular esports events.
+                Gladiator Games is Jefferson City's premier gaming center, providing gamers with state-of-the-art equipment, <a href="/events" class="text-brand-orange hover:brightness-110 no-underline font-semibold">competitive tournaments</a>, and a thriving community. Located at Strikers, we offer unlimited gaming memberships, hourly rates, and host regular esports events.
               </p>
               <div class="grid md:grid-cols-3 gap-4 mt-6">
                 <div>
@@ -32,7 +32,7 @@ import Footer from '../components/Footer.astro';
                 </div>
                 <div>
                   <h3 class="text-brand-orange-hover font-semibold mb-1">Games</h3>
-                  <p class="text-brand-gray">100+ Titles</p>
+                  <p class="text-brand-gray"><a href="/games" class="text-brand-orange hover:brightness-110 no-underline font-semibold">100+ Titles</a></p>
                 </div>
               </div>
             </div>

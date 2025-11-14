@@ -1,0 +1,373 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Equipment Specs - Gladiator Games"
+  description="Professional gaming equipment specs at Gladiator Games. RTX 4060 graphics, 32GB RAM, and optimized network performance for competitive gaming."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-brand-black py-16 md:py-24 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-gray-dark to-brand-black"></div>
+      </div>
+
+      <div class="container-custom relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 text-brand-white">
+            Professional Gaming Equipment
+          </h1>
+          <p class="text-brand-gray text-lg mb-8">
+            Every station is equipped with top-tier hardware for competitive performance
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PC Specs -->
+    <section class="py-16 md:py-24 bg-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-white">
+              Gaming PC Specifications
+            </h2>
+            <p class="text-brand-gray text-lg">
+              Built to handle the most demanding competitive titles at high performance
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <!-- Graphics Card -->
+            <div class="card">
+              <div class="flex items-start mb-4">
+                <div class="bg-brand-orange/20 rounded-lg p-3 mr-4">
+                  <svg class="w-8 h-8 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-bold text-brand-white mb-2">Graphics Card</h3>
+                  <p class="text-brand-orange font-semibold text-lg mb-1">NVIDIA GeForce RTX 4060</p>
+                  <p class="text-brand-gray text-sm">
+                    Ray tracing enabled, high-performance graphics for competitive gaming at high framerates
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Processor -->
+            <div class="card">
+              <div class="flex items-start mb-4">
+                <div class="bg-brand-purple/20 rounded-lg p-3 mr-4">
+                  <svg class="w-8 h-8 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-bold text-brand-white mb-2">Processor</h3>
+                  <p class="text-brand-purple font-semibold text-lg mb-1">Intel Core i5-12600K</p>
+                  <p class="text-brand-gray text-sm">
+                    12th generation Intel processor with high clock speeds for responsive gaming
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- RAM -->
+            <div class="card">
+              <div class="flex items-start mb-4">
+                <div class="bg-brand-cyan/20 rounded-lg p-3 mr-4">
+                  <svg class="w-8 h-8 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-bold text-brand-white mb-2">Memory</h3>
+                  <p class="text-brand-cyan font-semibold text-lg mb-1">32GB RAM</p>
+                  <p class="text-brand-gray text-sm">
+                    High-speed DDR4 memory for smooth multitasking and zero bottlenecks
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Storage -->
+            <div class="card">
+              <div class="flex items-start mb-4">
+                <div class="bg-brand-orange/20 rounded-lg p-3 mr-4">
+                  <svg class="w-8 h-8 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-bold text-brand-white mb-2">Storage</h3>
+                  <p class="text-brand-orange font-semibold text-lg mb-1">2.75TB SSD</p>
+                  <p class="text-brand-gray text-sm">
+                    Fast solid-state storage with space for our entire game library
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Performance Highlight -->
+          <div class="card bg-gradient-to-r from-brand-orange/10 via-brand-purple/10 to-brand-cyan/10 border-brand-orange/30">
+            <div class="text-center">
+              <h3 class="text-2xl font-bold text-brand-white mb-4">
+                Built for Competitive Performance
+              </h3>
+              <p class="text-brand-gray mb-6 max-w-3xl mx-auto">
+                Our systems are optimized to run competitive titles like League of Legends, Valorant, CS2, Fortnite, and more at high framerates with minimal input lag. Whether you're climbing ranked or competing in tournaments, our equipment won't hold you back.
+              </p>
+              <div class="flex flex-wrap justify-center gap-4">
+                <div class="bg-brand-black/50 rounded-lg px-6 py-3">
+                  <div class="text-brand-orange font-bold text-2xl">144+</div>
+                  <div class="text-brand-gray text-sm">FPS Capable</div>
+                </div>
+                <div class="bg-brand-black/50 rounded-lg px-6 py-3">
+                  <div class="text-brand-purple font-bold text-2xl">100+</div>
+                  <div class="text-brand-gray text-sm">Games Installed</div>
+                </div>
+                <div class="bg-brand-black/50 rounded-lg px-6 py-3">
+                  <div class="text-brand-cyan font-bold text-2xl">~24ms</div>
+                  <div class="text-brand-gray text-sm">Typical Ping</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Network & Peripherals -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Network -->
+            <div>
+              <h2 class="text-3xl font-bold mb-6 text-brand-white">Network Performance</h2>
+              <div class="space-y-4">
+                <div class="card">
+                  <div class="flex items-start">
+                    <div class="bg-brand-cyan/20 rounded-lg p-2 mr-3 mt-1">
+                      <svg class="w-6 h-6 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-brand-white mb-1">Low Latency Connection</h4>
+                      <p class="text-brand-gray text-sm">
+                        Typical ping around 24ms to most game servers ensures responsive gameplay with minimal delay
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="flex items-start">
+                    <div class="bg-brand-cyan/20 rounded-lg p-2 mr-3 mt-1">
+                      <svg class="w-6 h-6 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-brand-white mb-1">High-Speed Internet</h4>
+                      <p class="text-brand-gray text-sm">
+                        Gigabit fiber connection with QoS prioritization for gaming traffic
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="flex items-start">
+                    <div class="bg-brand-cyan/20 rounded-lg p-2 mr-3 mt-1">
+                      <svg class="w-6 h-6 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-brand-white mb-1">Stable & Secure</h4>
+                      <p class="text-brand-gray text-sm">
+                        Enterprise-grade network equipment with redundancy for reliable, uninterrupted gaming
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Peripherals -->
+            <div>
+              <h2 class="text-3xl font-bold mb-6 text-brand-white">Peripherals</h2>
+              <div class="space-y-4">
+                <div class="card">
+                  <div class="flex items-start">
+                    <div class="bg-brand-purple/20 rounded-lg p-2 mr-3 mt-1">
+                      <svg class="w-6 h-6 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-brand-white mb-1">Standard Gaming Peripherals</h4>
+                      <p class="text-brand-gray text-sm">
+                        All stations come with gaming keyboards, mice, headsets, and PS5 controllers
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card bg-gradient-to-r from-brand-orange/10 to-brand-purple/10 border-brand-orange/30">
+                  <div class="flex items-start">
+                    <div class="bg-brand-orange/30 rounded-lg p-2 mr-3 mt-1">
+                      <svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-brand-white mb-1">Bring Your Own (BYO)</h4>
+                      <p class="text-brand-gray text-sm">
+                        Prefer your own keyboard, mouse, headset, or controller? Feel free to bring them! We understand competitive players have their preferences.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="flex items-start">
+                    <div class="bg-brand-purple/20 rounded-lg p-2 mr-3 mt-1">
+                      <svg class="w-6 h-6 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-brand-white mb-1">High-Refresh Monitors</h4>
+                      <p class="text-brand-gray text-sm">
+                        Gaming monitors with high refresh rates for smooth, responsive visuals
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Software & Games -->
+    <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-white">
+              Game Library
+            </h2>
+            <p class="text-brand-gray text-lg">
+              Access to 100+ popular games across all genres
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-xl font-bold text-brand-white mb-4">Popular Titles Include:</h3>
+                <ul class="space-y-2 text-brand-gray">
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-brand-orange rounded-full mr-3"></span>
+                    League of Legends
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-brand-orange rounded-full mr-3"></span>
+                    Valorant
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-brand-orange rounded-full mr-3"></span>
+                    Counter-Strike 2
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-brand-orange rounded-full mr-3"></span>
+                    Fortnite
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-brand-orange rounded-full mr-3"></span>
+                    Rocket League
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-brand-orange rounded-full mr-3"></span>
+                    Apex Legends
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-brand-white mb-4">&nbsp;</h3>
+                <ul class="space-y-2 text-brand-gray">
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-brand-orange rounded-full mr-3"></span>
+                    Overwatch 2
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-brand-orange rounded-full mr-3"></span>
+                    Rainbow Six Siege
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-brand-orange rounded-full mr-3"></span>
+                    Minecraft
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-brand-orange rounded-full mr-3"></span>
+                    Call of Duty
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-brand-orange rounded-full mr-3"></span>
+                    Super Smash Bros Ultimate
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-brand-orange rounded-full mr-3"></span>
+                    And 90+ more titles!
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-6 border-t border-brand-gray-dark">
+              <p class="text-brand-gray text-sm">
+                <span class="text-brand-white font-semibold">Don't see your game?</span> We're constantly adding new titles. Let us know what you'd like to play and we'll do our best to add it to our library.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-white">
+            Experience Professional Gaming
+          </h2>
+          <p class="text-brand-gray text-lg mb-8">
+            Come test our equipment yourself and see why competitive players choose Gladiator Games
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/visit" class="btn-primary bg-brand-orange hover:bg-brand-orange-hover">
+              Plan Your Visit
+            </a>
+            <a href="/games" class="btn-primary bg-brand-purple hover:bg-brand-cyan">
+              Browse Games
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

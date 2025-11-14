@@ -1,0 +1,207 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const partyTypes = [
+  {
+    title: 'Birthday Parties',
+    description: 'Epic gaming birthday parties with unlimited play, private party rooms, and catering options',
+    image: '/images/branding/hero-image.avif',
+    href: '/parties/birthday',
+    icon: 'cake',
+  },
+  {
+    title: 'Bachelor/Bachelorette Parties',
+    description: 'Celebrate your last gaming night as a single player with an unforgettable party experience',
+    image: '/images/branding/hero-image.avif',
+    href: '/parties/bachelor',
+    icon: 'champagne',
+  },
+  {
+    title: 'Corporate Events',
+    description: 'Team building, company parties, and networking events in a high-tech gaming environment',
+    image: '/images/branding/hero-image.avif',
+    href: '/parties/corporate',
+    icon: 'briefcase',
+  },
+  {
+    title: 'Tournament Hosting',
+    description: 'Host your own esports tournament with professional equipment and streaming setup',
+    image: '/images/branding/hero-image.avif',
+    href: '/parties/tournaments',
+    icon: 'trophy',
+  },
+];
+---
+
+<Layout
+  title="Host Your Event at Gladiator Games | Private Party Rooms in Jefferson City"
+  description="Host birthday parties, bachelor parties, corporate events, and gaming tournaments at Jefferson City's premier gaming center. Private rooms, catering, and premium equipment available."
+>
+  <Header />
+  <main class="bg-brand-black min-h-screen">
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 bg-gradient-to-b from-brand-gray-dark to-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 text-brand-white">
+            Host Your Event at Gladiator Games
+          </h1>
+          <p class="text-xl md:text-2xl text-brand-gray mb-8">
+            Private party rooms, premium gaming equipment, and unforgettable experiences for groups of all sizes
+          </p>
+          <a href="/contact" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange">
+            Book Your Event
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Types Grid -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl font-bold mb-12 text-brand-white text-center">
+            Perfect Venue for Any Occasion
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            {partyTypes.map((party) => (
+              <a
+                href={party.href}
+                class="card hover:border-brand-orange transition-all duration-300 no-underline group"
+              >
+                <div class="aspect-video w-full overflow-hidden rounded-lg bg-brand-gray-dark flex items-center justify-center mb-4">
+                  <img
+                    src={party.image}
+                    alt={party.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-50"
+                  />
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-brand-white group-hover:text-brand-orange transition-colors">
+                  {party.title}
+                </h3>
+                <p class="text-brand-gray mb-4 leading-relaxed">
+                  {party.description}
+                </p>
+                <div class="flex items-center text-brand-orange font-semibold">
+                  Learn More
+                  <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl font-bold mb-12 text-brand-white text-center">
+            What's Included
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="card text-center">
+              <div class="text-brand-orange mb-4">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-brand-white">Private Party Rooms</h3>
+              <p class="text-brand-gray">
+                Dedicated private spaces for your group with high-end gaming PCs and comfortable seating
+              </p>
+            </div>
+            <div class="card text-center">
+              <div class="text-brand-orange mb-4">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-brand-white">Flexible Duration</h3>
+              <p class="text-brand-gray">
+                Book for 2 hours or the entire day - we'll customize the experience to fit your needs
+              </p>
+            </div>
+            <div class="card text-center">
+              <div class="text-brand-orange mb-4">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-brand-white">Food & Beverages</h3>
+              <p class="text-brand-gray">
+                Full menu available from Strikers with delivery to your party room - from snacks to full meals
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Overview -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="card bg-gradient-to-r from-brand-orange/10 to-brand-purple/10 border-brand-orange">
+            <h2 class="text-3xl font-bold mb-6 text-brand-white text-center">
+              Private Party Pricing
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="bg-brand-black/50 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-brand-white mb-2">Small Room</h3>
+                <p class="text-brand-gray mb-4">Up to 10 players</p>
+                <div class="text-3xl font-bold text-brand-orange mb-2">$200</div>
+                <p class="text-brand-gray text-sm">2-hour minimum</p>
+              </div>
+              <div class="bg-brand-black/50 rounded-lg p-6">
+                <h3 class="text-xl font-bold text-brand-white mb-2">Large Room</h3>
+                <p class="text-brand-gray mb-4">Up to 20 players</p>
+                <div class="text-3xl font-bold text-brand-orange mb-2">$400</div>
+                <p class="text-brand-gray text-sm">2-hour minimum</p>
+              </div>
+            </div>
+            <p class="text-brand-gray text-center mb-6">
+              Pricing varies by event type and duration. Contact us for a custom quote tailored to your needs.
+            </p>
+            <div class="text-center">
+              <a href="/contact" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange">
+                Get a Custom Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gradient-to-r from-brand-orange/10 via-brand-purple/10 to-brand-cyan/10 rounded-lg p-6 border border-brand-orange/30">
+            <div class="flex items-center justify-center mb-4">
+              <div class="w-3 h-3 bg-brand-orange rounded-full animate-pulse mr-2"></div>
+              <h2 class="text-2xl md:text-3xl font-bold text-brand-white">Ready to Book Your Event?</h2>
+            </div>
+            <p class="text-brand-gray text-center mb-6">
+              Contact us today to discuss your event and get a custom quote
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange">
+                Contact Us
+              </a>
+              <a href="tel:5736162779" class="btn-primary bg-brand-black border-2 border-brand-orange-hover text-brand-orange-hover hover:bg-brand-orange-hover hover:text-brand-white">
+                Call (573) 616-2779
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

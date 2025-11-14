@@ -1,0 +1,302 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Plan Your Visit | Gladiator Games Jefferson City"
+  description="Everything you need to know for your first visit to Gladiator Games - parking, entrance, what to bring, and getting started."
+>
+  <Header />
+  <main class="bg-brand-black min-h-screen">
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 bg-gradient-to-b from-brand-gray-dark to-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 text-brand-white">
+            Plan Your Visit
+          </h1>
+          <p class="text-xl md:text-2xl text-brand-gray mb-8">
+            Everything you need to know for an amazing gaming experience
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="card text-center">
+              <div class="text-brand-orange mb-3">
+                <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-brand-white mb-2">Location</h3>
+              <p class="text-brand-gray text-sm">
+                2017 Christy Dr.<br/>
+                Jefferson City, MO 65101
+              </p>
+            </div>
+
+            <div class="card text-center">
+              <div class="text-brand-orange mb-3">
+                <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-brand-white mb-2">Hours</h3>
+              <p class="text-brand-gray text-sm">
+                Mon-Thu: 11AM-10PM<br/>
+                Fri-Sat: 11AM-11PM<br/>
+                Sun: 11AM-8PM
+              </p>
+            </div>
+
+            <div class="card text-center">
+              <div class="text-brand-orange mb-3">
+                <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-brand-white mb-2">Contact</h3>
+              <p class="text-brand-gray text-sm">
+                <a href="tel:5736162779" class="hover:text-brand-orange transition-colors">(573) 616-2779</a><br/>
+                <a href="mailto:info@gladiatorgames.net" class="hover:text-brand-orange transition-colors">info@gladiatorgames.net</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Getting Here -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-brand-white text-center">Getting Here</h2>
+
+          <div class="card mb-8">
+            <h3 class="text-xl font-bold text-brand-white mb-4 flex items-center">
+              <svg class="w-6 h-6 text-brand-orange mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+              </svg>
+              Parking
+            </h3>
+            <p class="text-brand-gray mb-3">
+              Free parking is available in the lot in front of or on the side of the Strikers building. We have plenty of spaces available for our guests.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="text-xl font-bold text-brand-white mb-4 flex items-center">
+              <svg class="w-6 h-6 text-brand-orange mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+              Finding the Entrance
+            </h3>
+            <div class="space-y-3 text-brand-gray">
+              <div class="flex items-start">
+                <div class="bg-brand-orange rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
+                  <span class="text-brand-white text-sm font-bold">1</span>
+                </div>
+                <p>Enter the Strikers building through the main entrance</p>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-brand-orange rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
+                  <span class="text-brand-white text-sm font-bold">2</span>
+                </div>
+                <p>Walk past the restaurant area</p>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-brand-orange rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
+                  <span class="text-brand-white text-sm font-bold">3</span>
+                </div>
+                <p>Head down the stairs on the right</p>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-brand-orange rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
+                  <span class="text-brand-white text-sm font-bold">4</span>
+                </div>
+                <p>Gladiator Games is straight ahead!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What to Expect -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-brand-white text-center">What to Expect</h2>
+
+          <div class="space-y-6">
+            <div class="card">
+              <h3 class="text-xl font-bold text-brand-white mb-3">When You Arrive</h3>
+              <p class="text-brand-gray">
+                You'll be greeted by Strikers staff as you enter the building, and then by our Gladiator Games staff as you reach the gaming area. Our friendly team will welcome you and help you get set up!
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="text-xl font-bold text-brand-white mb-3">Getting Started</h3>
+              <p class="text-brand-gray mb-3">
+                Our staff will walk you through a quick account setup or help you log into your existing account. This takes just a minute or two, and then you're ready to play!
+              </p>
+              <ol class="space-y-2 text-brand-gray ml-6">
+                <li class="flex items-start">
+                  <span class="text-brand-orange mr-2">•</span>
+                  <span>Choose any available gaming station</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-orange mr-2">•</span>
+                  <span>Create your account or log in (we'll help!)</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-orange mr-2">•</span>
+                  <span>Browse our library of 100+ games</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-orange mr-2">•</span>
+                  <span>Start playing immediately!</span>
+                </li>
+              </ol>
+            </div>
+
+            <div class="card">
+              <h3 class="text-xl font-bold text-brand-white mb-3">What to Bring</h3>
+              <p class="text-brand-gray mb-3">
+                You don't need to bring anything! We provide everything you need:
+              </p>
+              <ul class="space-y-2 text-brand-gray ml-6">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-brand-orange mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>High-performance gaming PC</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-brand-orange mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>240Hz gaming monitor</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-brand-orange mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Gaming keyboard, mouse, and headset</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-brand-orange mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>PS5 controllers</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-brand-orange mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Fiber internet connection</span>
+                </li>
+              </ul>
+              <p class="text-brand-gray mt-3 text-sm italic">
+                Feel free to bring your own keyboard, mouse, headset, or controller if you prefer using your personal gear!
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="text-xl font-bold text-brand-white mb-3">Age Policy</h3>
+              <p class="text-brand-gray">
+                Gamers 16 and older can visit solo. Anyone under 16 must be accompanied by a parent or guardian. We're a welcoming, family-friendly environment for gamers of all skill levels!
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="text-xl font-bold text-brand-white mb-3">Food & Drinks</h3>
+              <p class="text-brand-gray mb-3">
+                Gladiator Games is located inside Strikers, which offers a full menu of delicious food and drinks that can be delivered right to your gaming station.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a href="https://www.strikersjc.com/eat" target="_blank" rel="noopener noreferrer" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange text-sm">
+                  View Food Menu
+                </a>
+                <a href="https://www.strikersjc.com/drink" target="_blank" rel="noopener noreferrer" class="btn-primary bg-brand-black border-2 border-brand-orange-hover text-brand-orange-hover hover:bg-brand-orange-hover hover:text-brand-white text-sm">
+                  View Drink Menu
+                </a>
+              </div>
+              <p class="text-brand-gray text-sm mt-3">
+                Note: Outside food and drinks are not permitted.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-brand-white text-center">Pricing Options</h2>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="card text-center border-2 border-brand-orange">
+              <h3 class="text-xl font-bold text-brand-white mb-2">Hourly</h3>
+              <div class="text-4xl font-bold text-brand-orange mb-3">$10</div>
+              <p class="text-brand-gray text-sm">Perfect for quick sessions</p>
+            </div>
+
+            <div class="card text-center border-2 border-brand-orange">
+              <h3 class="text-xl font-bold text-brand-white mb-2">All Day</h3>
+              <div class="text-4xl font-bold text-brand-orange mb-3">$20</div>
+              <p class="text-brand-gray text-sm">Game all day long</p>
+            </div>
+
+            <div class="card text-center border-2 border-brand-purple">
+              <h3 class="text-xl font-bold text-brand-white mb-2">Membership</h3>
+              <div class="text-4xl font-bold text-brand-purple mb-3">$16+</div>
+              <p class="text-brand-gray text-sm">Unlimited monthly gaming</p>
+            </div>
+          </div>
+
+          <p class="text-center text-brand-gray mt-6">
+            <a href="/#membership" class="text-brand-orange hover:brightness-110 font-semibold">View full membership details →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gradient-to-r from-brand-orange/10 via-brand-purple/10 to-brand-cyan/10 rounded-lg p-6 border border-brand-orange/30">
+            <div class="flex items-center justify-center mb-4">
+              <div class="w-3 h-3 bg-brand-orange rounded-full animate-pulse mr-2"></div>
+              <h2 class="text-2xl md:text-3xl font-bold text-brand-white">Ready to Game?</h2>
+            </div>
+            <p class="text-brand-gray text-center mb-6">
+              Walk-ins are always welcome! No reservation needed - just show up and play.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange">
+                Get Directions
+              </a>
+              <a href="tel:5736162779" class="btn-primary bg-brand-black border-2 border-brand-orange-hover text-brand-orange-hover hover:bg-brand-orange-hover hover:text-brand-white">
+                Call (573) 616-2779
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

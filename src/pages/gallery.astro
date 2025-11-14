@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Photo Gallery - Gladiator Games">
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-brand-black py-16 md:py-24 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-gray-dark to-brand-black"></div>
+      </div>
+
+      <div class="container-custom relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 text-brand-white">
+            Photo Gallery
+          </h1>
+          <p class="text-brand-gray text-lg mb-8">
+            Take a look inside Jefferson City's premier gaming destination
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-16 md:py-24 bg-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-7xl mx-auto">
+          <!-- Featured Image -->
+          <div class="mb-12">
+            <div class="card overflow-hidden">
+              <img
+                src="/images/branding/hero-image.avif"
+                alt="Gladiator Games Gaming Arena"
+                class="w-full h-[400px] md:h-[500px] object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-2xl font-bold text-brand-white mb-2">Our Gaming Arena</h3>
+                <p class="text-brand-gray">
+                  State-of-the-art gaming stations equipped with premium hardware
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Categories -->
+          <div class="mb-8">
+            <div class="flex flex-wrap gap-3 justify-center">
+              <button class="px-6 py-2 bg-brand-orange text-brand-white rounded-lg font-semibold hover:bg-brand-orange-hover transition-colors">
+                All Photos
+              </button>
+              <button class="px-6 py-2 bg-brand-gray-dark border border-brand-gray text-brand-gray hover:border-brand-orange hover:text-brand-orange transition-colors rounded-lg font-semibold">
+                Gaming Stations
+              </button>
+              <button class="px-6 py-2 bg-brand-gray-dark border border-brand-gray text-brand-gray hover:border-brand-orange hover:text-brand-orange transition-colors rounded-lg font-semibold">
+                Events
+              </button>
+              <button class="px-6 py-2 bg-brand-gray-dark border border-brand-gray text-brand-gray hover:border-brand-orange hover:text-brand-orange transition-colors rounded-lg font-semibold">
+                Community
+              </button>
+            </div>
+          </div>
+
+          <!-- Placeholder Gallery Grid -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Placeholder 1 -->
+            <div class="card overflow-hidden group cursor-pointer">
+              <div class="bg-gradient-to-br from-brand-orange/20 to-brand-purple/20 h-64 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-orange/10 to-brand-purple/10 group-hover:scale-110 transition-transform duration-300"></div>
+                <div class="relative z-10 text-center">
+                  <svg class="w-16 h-16 text-brand-orange mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Gaming Station</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Placeholder 2 -->
+            <div class="card overflow-hidden group cursor-pointer">
+              <div class="bg-gradient-to-br from-brand-purple/20 to-brand-cyan/20 h-64 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-purple/10 to-brand-cyan/10 group-hover:scale-110 transition-transform duration-300"></div>
+                <div class="relative z-10 text-center">
+                  <svg class="w-16 h-16 text-brand-purple mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Tournament Event</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Placeholder 3 -->
+            <div class="card overflow-hidden group cursor-pointer">
+              <div class="bg-gradient-to-br from-brand-cyan/20 to-brand-orange/20 h-64 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-cyan/10 to-brand-orange/10 group-hover:scale-110 transition-transform duration-300"></div>
+                <div class="relative z-10 text-center">
+                  <svg class="w-16 h-16 text-brand-cyan mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Community Night</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Placeholder 4 -->
+            <div class="card overflow-hidden group cursor-pointer">
+              <div class="bg-gradient-to-br from-brand-orange/20 to-brand-cyan/20 h-64 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-orange/10 to-brand-cyan/10 group-hover:scale-110 transition-transform duration-300"></div>
+                <div class="relative z-10 text-center">
+                  <svg class="w-16 h-16 text-brand-orange mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Setup Detail</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Placeholder 5 -->
+            <div class="card overflow-hidden group cursor-pointer">
+              <div class="bg-gradient-to-br from-brand-purple/20 to-brand-orange/20 h-64 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-purple/10 to-brand-orange/10 group-hover:scale-110 transition-transform duration-300"></div>
+                <div class="relative z-10 text-center">
+                  <svg class="w-16 h-16 text-brand-purple mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Party Event</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Placeholder 6 -->
+            <div class="card overflow-hidden group cursor-pointer">
+              <div class="bg-gradient-to-br from-brand-cyan/20 to-brand-purple/20 h-64 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-cyan/10 to-brand-purple/10 group-hover:scale-110 transition-transform duration-300"></div>
+                <div class="relative z-10 text-center">
+                  <svg class="w-16 h-16 text-brand-cyan mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Gaming Action</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coming Soon Note -->
+          <div class="mt-12 text-center">
+            <div class="card inline-block">
+              <div class="flex items-center gap-3">
+                <svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <div class="text-left">
+                  <p class="text-brand-white font-semibold">More Photos Coming Soon!</p>
+                  <p class="text-brand-gray text-sm">We're capturing our space and community. Check back soon for updates.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-b from-brand-gray-dark to-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-white">
+            Experience It Yourself
+          </h2>
+          <p class="text-brand-gray text-lg mb-8">
+            Ready to see what Gladiator Games is all about? Visit us today!
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/visit" class="btn-primary bg-brand-orange hover:bg-brand-orange-hover">
+              Plan Your Visit
+            </a>
+            <a href="/contact" class="btn-primary bg-brand-cyan hover:bg-brand-purple">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

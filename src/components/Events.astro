@@ -1,11 +1,25 @@
 ---
 const events = [
   {
-    title: 'Retro Night',
-    date: 'Friday, November 6th, 2025',
-    time: '7:00 PM',
-    description: 'Join us for a nostalgic evening of classic gaming, retro tournaments, and throwback vibes!',
-    status: 'Upcoming',
+    title: 'Super Smash Bros Tournament',
+    type: 'Tournament',
+    description: 'Bring your A-game to our Super Smash Bros tournament! Compete against Jefferson City\'s best players for prizes and glory.',
+    status: 'Coming Soon',
+    color: 'orange',
+  },
+  {
+    title: 'Rocket League Tournament',
+    type: 'Tournament',
+    description: 'Rev up your engines! Join our Rocket League tournament featuring intense 1v1, 2v2, and 3v3 competitive matches.',
+    status: 'Coming Soon',
+    color: 'purple',
+  },
+  {
+    title: 'League of Legends Tournament',
+    type: 'Tournament',
+    description: 'Summoners, assemble! Compete in our League of Legends tournament and prove your team has what it takes to dominate the Rift.',
+    status: 'Coming Soon',
+    color: 'cyan',
   },
 ];
 ---
@@ -13,26 +27,36 @@ const events = [
 <section id="events" class="py-16 md:py-24 bg-brand-black">
   <div class="container-custom">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Upcoming Events</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-white">Upcoming Events</h2>
       <p class="text-brand-gray text-lg">
-        Stay tuned for tournaments and competitive gaming events
+        Check out our planned tournaments and community events
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-2xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-8">
       {events.map((event) => (
-        <div class="card border-l-4 border-brand-orange-hover hover:border-brand-orange transition-all col-span-full">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-bold text-brand-orange-hover uppercase tracking-wide">
-              {event.status}
+        <div class={`card border-2 border-brand-${event.color}/30 hover:border-brand-${event.color} transition-all`}>
+          <div class="mb-4">
+            <span class={`inline-block bg-brand-${event.color}/20 text-brand-${event.color} px-3 py-1 rounded-full text-sm font-semibold mb-2`}>
+              {event.type}
             </span>
-            <span class="text-brand-cyan font-bold">{event.time}</span>
+            <h3 class="text-xl font-bold text-brand-white">{event.title}</h3>
           </div>
-          <h3 class="text-2xl md:text-3xl font-bold mb-3">{event.title}</h3>
-          <p class="text-brand-white mb-3 font-semibold">{event.date}</p>
-          <p class="text-brand-gray">{event.description}</p>
+          <p class="text-brand-gray text-sm mb-4">{event.description}</p>
+          <div class="flex items-center justify-between">
+            <span class="text-brand-white font-semibold text-sm">{event.status}</span>
+            <a href="/events" class={`text-brand-${event.color} hover:brightness-110 text-sm font-semibold`}>
+              Learn More →
+            </a>
+          </div>
         </div>
       ))}
+    </div>
+
+    <div class="text-center">
+      <a href="/events" class="btn-primary bg-brand-orange hover:bg-brand-orange-hover">
+        View All Events
+      </a>
     </div>
   </div>
 </section>

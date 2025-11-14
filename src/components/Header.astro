@@ -1,12 +1,34 @@
 ---
 const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'Games', href: '/games' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Events', href: '/events' },
-  { name: 'Parties', href: '/parties' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Servers', href: '/servers' },
+  {
+    name: 'Play',
+    dropdown: [
+      { name: 'Games', href: '/games' },
+      { name: 'Servers', href: '/servers' },
+      { name: 'Tools', href: '/tools' },
+      { name: 'Specs', href: '/specs' },
+    ]
+  },
+  {
+    name: 'Community',
+    dropdown: [
+      { name: 'Events', href: '/events' },
+      { name: 'Parties', href: '/parties' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Gallery', href: '/gallery' },
+    ]
+  },
+  {
+    name: 'About',
+    dropdown: [
+      { name: 'Visit', href: '/visit' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Franchise', href: '/franchise' },
+      { name: 'Press Kit', href: '/media-kit' },
+    ]
+  },
   { name: 'Contact', href: '/contact' },
 ];
 ---
@@ -22,19 +44,40 @@ const navItems = [
 
       <ul class="hidden md:flex space-x-8">
         {navItems.map((item) => (
-          <li>
-            <a
-              href={item.href}
-              class="text-brand-white hover:text-brand-orange-hover transition-colors no-underline font-medium"
-            >
-              {item.name}
-            </a>
+          <li class="relative group">
+            {item.dropdown ? (
+              <>
+                <button class="text-brand-white hover:text-brand-orange-hover transition-colors font-medium flex items-center gap-1">
+                  {item.name}
+                  <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="absolute top-full left-0 mt-2 w-48 bg-brand-gray-dark/95 backdrop-blur-xl border border-brand-gray/30 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
+                  {item.dropdown.map((subItem) => (
+                    <a
+                      href={subItem.href}
+                      class="block px-4 py-3 text-brand-white hover:bg-brand-orange/20 hover:text-brand-orange transition-colors no-underline font-medium border-b border-brand-gray/20 last:border-b-0"
+                    >
+                      {subItem.name}
+                    </a>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <a
+                href={item.href}
+                class="text-brand-white hover:text-brand-orange-hover transition-colors no-underline font-medium"
+              >
+                {item.name}
+              </a>
+            )}
           </li>
         ))}
       </ul>
 
       <!-- Mobile menu button -->
-      <button id="mobile-menu-button" class="md:hidden text-brand-white">
+      <button id="mobile-menu-button" class="md:hidden text-brand-white" aria-label="Toggle navigation menu">
         <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
@@ -47,14 +90,38 @@ const navItems = [
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
       <ul class="space-y-2">
-        {navItems.map((item) => (
+        {navItems.map((item, index) => (
           <li>
-            <a
-              href={item.href}
-              class="block px-4 py-2 text-brand-white hover:bg-brand-gray-dark hover:text-brand-orange-hover transition-colors no-underline font-medium rounded-lg"
-            >
-              {item.name}
-            </a>
+            {item.dropdown ? (
+              <div>
+                <button
+                  class="mobile-dropdown-toggle w-full flex items-center justify-between px-4 py-2 text-brand-white hover:bg-brand-gray-dark hover:text-brand-orange-hover transition-colors font-medium rounded-lg"
+                  data-index={index}
+                >
+                  {item.name}
+                  <svg class="mobile-dropdown-icon w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="mobile-dropdown-content hidden ml-4 mt-2 space-y-1" data-index={index}>
+                  {item.dropdown.map((subItem) => (
+                    <a
+                      href={subItem.href}
+                      class="block px-4 py-2 text-brand-gray hover:bg-brand-gray-dark hover:text-brand-orange transition-colors no-underline font-medium rounded-lg"
+                    >
+                      {subItem.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <a
+                href={item.href}
+                class="block px-4 py-2 text-brand-white hover:bg-brand-gray-dark hover:text-brand-orange-hover transition-colors no-underline font-medium rounded-lg"
+              >
+                {item.name}
+              </a>
+            )}
           </li>
         ))}
       </ul>
@@ -100,6 +167,19 @@ const navItems = [
       mobileMenu?.classList.add('hidden');
       menuIcon?.classList.remove('hidden');
       closeIcon?.classList.add('hidden');
+    });
+  });
+
+  // Mobile dropdown toggles
+  const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+  mobileDropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const index = toggle.getAttribute('data-index');
+      const content = document.querySelector(`.mobile-dropdown-content[data-index="${index}"]`);
+      const icon = toggle.querySelector('.mobile-dropdown-icon');
+
+      content?.classList.toggle('hidden');
+      icon?.classList.toggle('rotate-180');
     });
   });
 </script>

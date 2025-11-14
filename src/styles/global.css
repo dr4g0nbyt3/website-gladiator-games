@@ -31,7 +31,7 @@
   }
 
   .btn-primary {
-    @apply bg-brand-gray-dark text-brand-white px-6 py-3 rounded hover:bg-brand-red transition-colors duration-200 no-underline inline-block;
+    @apply bg-brand-gray-dark text-brand-white px-6 py-3 rounded hover:bg-brand-orange transition-colors duration-200 no-underline inline-block;
   }
 
   .card {

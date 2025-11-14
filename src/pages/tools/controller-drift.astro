@@ -1,0 +1,333 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Controller Drift Analyzer - Gladiator Games"
+  description="Test your gaming controller for stick drift and dead zones. Free tool supporting Xbox, PlayStation, Nintendo Switch, and PC controllers."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-8">
+            <a href="/tools" class="text-brand-orange hover:brightness-110 inline-flex items-center mb-4">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+              Back to Tools
+            </a>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-brand-white">
+              Controller Drift Analyzer
+            </h1>
+            <p class="text-brand-gray text-lg">
+              Test your controller for stick drift and dead zone issues
+            </p>
+          </div>
+
+          <!-- Instructions -->
+          <div class="card mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-brand-white">How to Use</h2>
+            <ol class="space-y-2 text-brand-gray">
+              <li class="flex items-start">
+                <span class="text-brand-orange font-bold mr-3">1.</span>
+                <span>Connect your controller to your computer via USB or Bluetooth</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-orange font-bold mr-3">2.</span>
+                <span>Press any button on your controller to activate it</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-orange font-bold mr-3">3.</span>
+                <span>Let go of both analog sticks and observe the visualization</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-orange font-bold mr-3">4.</span>
+                <span>Green = no drift, Yellow = minor drift, Red = significant drift</span>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Controller Status -->
+          <div class="card mb-8">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-2xl font-bold text-brand-white">Controller Status</h2>
+              <div id="controller-status" class="flex items-center">
+                <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+                <span class="text-brand-gray">No Controller Detected</span>
+              </div>
+            </div>
+            <div id="controller-info" class="text-brand-gray text-sm hidden">
+              <p><strong>Controller:</strong> <span id="controller-name">-</span></p>
+              <p><strong>Type:</strong> <span id="controller-type">-</span></p>
+            </div>
+          </div>
+
+          <!-- Visualization -->
+          <div class="card mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-brand-white">Stick Position</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+              <!-- Left Stick -->
+              <div>
+                <h3 class="text-lg font-bold mb-4 text-center text-brand-white">Left Analog Stick</h3>
+                <div class="relative bg-brand-gray-dark rounded-lg p-4">
+                  <canvas id="left-stick-canvas" width="300" height="300" class="w-full"></canvas>
+                </div>
+                <div class="mt-4 text-center">
+                  <p class="text-brand-gray text-sm">Position: <span id="left-stick-pos" class="text-brand-white font-mono">0.00, 0.00</span></p>
+                  <p class="text-brand-gray text-sm">Drift: <span id="left-stick-drift" class="text-brand-white font-bold">None</span></p>
+                </div>
+              </div>
+
+              <!-- Right Stick -->
+              <div>
+                <h3 class="text-lg font-bold mb-4 text-center text-brand-white">Right Analog Stick</h3>
+                <div class="relative bg-brand-gray-dark rounded-lg p-4">
+                  <canvas id="right-stick-canvas" width="300" height="300" class="w-full"></canvas>
+                </div>
+                <div class="mt-4 text-center">
+                  <p class="text-brand-gray text-sm">Position: <span id="right-stick-pos" class="text-brand-white font-mono">0.00, 0.00</span></p>
+                  <p class="text-brand-gray text-sm">Drift: <span id="right-stick-drift" class="text-brand-white font-bold">None</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results & Recommendations -->
+          <div id="results" class="card hidden">
+            <h2 class="text-2xl font-bold mb-4 text-brand-white">Analysis Results</h2>
+            <div id="results-content"></div>
+          </div>
+
+          <!-- Save Results -->
+          <div class="card">
+            <h2 class="text-2xl font-bold mb-4 text-brand-white">Save Your Results</h2>
+            <p class="text-brand-gray mb-4">Track your controller's condition over time</p>
+            <button id="save-results-btn" class="btn-primary bg-brand-orange hover:bg-brand-orange-hover" disabled>
+              Save Analysis
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  let gamepadIndex: number | null = null;
+  let animationId: number;
+
+  const leftCanvas = document.getElementById('left-stick-canvas') as HTMLCanvasElement;
+  const rightCanvas = document.getElementById('right-stick-canvas') as HTMLCanvasElement;
+  const leftCtx = leftCanvas.getContext('2d')!;
+  const rightCtx = rightCanvas.getContext('2d')!;
+
+  const deadZoneThreshold = 0.1;
+  const driftThreshold = 0.15;
+
+  function drawStickVisualization(ctx: CanvasRenderingContext2D, x: number, y: number, drift: boolean) {
+    const centerX = ctx.canvas.width / 2;
+    const centerY = ctx.canvas.height / 2;
+    const radius = Math.min(centerX, centerY) - 20;
+
+    // Clear canvas
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+    // Draw dead zone circle
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius * deadZoneThreshold, 0, 2 * Math.PI);
+    ctx.fillStyle = 'rgba(34, 197, 94, 0.2)';
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(34, 197, 94, 0.5)';
+    ctx.stroke();
+
+    // Draw outer circle
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Draw crosshair
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(centerX, 0);
+    ctx.lineTo(centerX, ctx.canvas.height);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(0, centerY);
+    ctx.lineTo(ctx.canvas.width, centerY);
+    ctx.stroke();
+
+    // Draw stick position
+    const stickX = centerX + x * radius;
+    const stickY = centerY + y * radius;
+
+    ctx.beginPath();
+    ctx.arc(stickX, stickY, 10, 0, 2 * Math.PI);
+
+    if (drift) {
+      ctx.fillStyle = '#ef4444'; // red
+    } else if (Math.abs(x) < deadZoneThreshold && Math.abs(y) < deadZoneThreshold) {
+      ctx.fillStyle = '#22c55e'; // green
+    } else {
+      ctx.fillStyle = '#eab308'; // yellow
+    }
+
+    ctx.fill();
+    ctx.strokeStyle = '#ffffff';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Draw line from center to stick
+    ctx.beginPath();
+    ctx.moveTo(centerX, centerY);
+    ctx.lineTo(stickX, stickY);
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+  }
+
+  function getDriftStatus(x: number, y: number): { hasDrift: boolean; severity: string } {
+    const magnitude = Math.sqrt(x * x + y * y);
+
+    if (magnitude < deadZoneThreshold) {
+      return { hasDrift: false, severity: 'None' };
+    } else if (magnitude < driftThreshold) {
+      return { hasDrift: false, severity: 'Minor' };
+    } else {
+      return { hasDrift: true, severity: 'Significant' };
+    }
+  }
+
+  function updateController() {
+    const gamepads = navigator.getGamepads();
+
+    if (gamepadIndex !== null && gamepads[gamepadIndex]) {
+      const gamepad = gamepads[gamepadIndex];
+
+      // Left stick (axes 0 and 1)
+      const leftX = gamepad.axes[0];
+      const leftY = gamepad.axes[1];
+      const leftDrift = getDriftStatus(leftX, leftY);
+
+      // Right stick (axes 2 and 3)
+      const rightX = gamepad.axes[2];
+      const rightY = gamepad.axes[3];
+      const rightDrift = getDriftStatus(rightX, rightY);
+
+      // Update visualizations
+      drawStickVisualization(leftCtx, leftX, leftY, leftDrift.hasDrift);
+      drawStickVisualization(rightCtx, rightX, rightY, rightDrift.hasDrift);
+
+      // Update text displays
+      document.getElementById('left-stick-pos')!.textContent = `${leftX.toFixed(2)}, ${leftY.toFixed(2)}`;
+      document.getElementById('left-stick-drift')!.textContent = leftDrift.severity;
+
+      document.getElementById('right-stick-pos')!.textContent = `${rightX.toFixed(2)}, ${rightY.toFixed(2)}`;
+      document.getElementById('right-stick-drift')!.textContent = rightDrift.severity;
+
+      // Update drift status styling
+      const leftDriftEl = document.getElementById('left-stick-drift')!;
+      const rightDriftEl = document.getElementById('right-stick-drift')!;
+
+      leftDriftEl.className = leftDrift.hasDrift ? 'text-red-500 font-bold' : leftDrift.severity === 'Minor' ? 'text-yellow-500 font-bold' : 'text-green-500 font-bold';
+      rightDriftEl.className = rightDrift.hasDrift ? 'text-red-500 font-bold' : rightDrift.severity === 'Minor' ? 'text-yellow-500 font-bold' : 'text-green-500 font-bold';
+    }
+
+    animationId = requestAnimationFrame(updateController);
+  }
+
+  function onGamepadConnected(e: GamepadEvent) {
+    console.log('Gamepad connected:', e.gamepad);
+    gamepadIndex = e.gamepad.index;
+
+    // Update status
+    const statusEl = document.getElementById('controller-status')!;
+    statusEl.innerHTML = `
+      <div class="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+      <span class="text-green-500">Controller Connected</span>
+    `;
+
+    // Update controller info
+    const infoEl = document.getElementById('controller-info')!;
+    infoEl.classList.remove('hidden');
+    document.getElementById('controller-name')!.textContent = e.gamepad.id;
+    document.getElementById('controller-type')!.textContent = detectControllerType(e.gamepad.id);
+
+    // Enable save button
+    const saveBtn = document.getElementById('save-results-btn') as HTMLButtonElement;
+    saveBtn.disabled = false;
+
+    // Start update loop
+    updateController();
+  }
+
+  function onGamepadDisconnected(e: GamepadEvent) {
+    console.log('Gamepad disconnected:', e.gamepad);
+
+    if (e.gamepad.index === gamepadIndex) {
+      gamepadIndex = null;
+
+      // Update status
+      const statusEl = document.getElementById('controller-status')!;
+      statusEl.innerHTML = `
+        <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+        <span class="text-brand-gray">No Controller Detected</span>
+      `;
+
+      // Hide controller info
+      document.getElementById('controller-info')!.classList.add('hidden');
+
+      // Disable save button
+      const saveBtn = document.getElementById('save-results-btn') as HTMLButtonElement;
+      saveBtn.disabled = true;
+
+      // Stop update loop
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+
+      // Clear canvases
+      leftCtx.clearRect(0, 0, leftCanvas.width, leftCanvas.height);
+      rightCtx.clearRect(0, 0, rightCanvas.width, rightCanvas.height);
+    }
+  }
+
+  function detectControllerType(id: string): string {
+    id = id.toLowerCase();
+    if (id.includes('xbox')) return 'Xbox Controller';
+    if (id.includes('playstation') || id.includes('dualshock') || id.includes('dualsense')) return 'PlayStation Controller';
+    if (id.includes('nintendo') || id.includes('pro controller')) return 'Nintendo Switch Pro Controller';
+    if (id.includes('joy-con')) return 'Nintendo Joy-Con';
+    return 'Generic Controller';
+  }
+
+  // Initialize
+  window.addEventListener('gamepadconnected', onGamepadConnected);
+  window.addEventListener('gamepaddisconnected', onGamepadDisconnected);
+
+  // Check for already connected gamepads
+  const gamepads = navigator.getGamepads();
+  for (let i = 0; i < gamepads.length; i++) {
+    if (gamepads[i]) {
+      onGamepadConnected({ gamepad: gamepads[i] } as GamepadEvent);
+    }
+  }
+
+  // Initialize canvases with empty state
+  drawStickVisualization(leftCtx, 0, 0, false);
+  drawStickVisualization(rightCtx, 0, 0, false);
+
+  // Save results functionality
+  document.getElementById('save-results-btn')?.addEventListener('click', () => {
+    alert('Save functionality coming soon! This will allow you to track controller condition over time.');
+  });
+</script>
+</Layout>

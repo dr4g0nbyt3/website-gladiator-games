@@ -1,0 +1,345 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Sensitivity Translator - Gladiator Games"
+  description="Convert mouse sensitivity perfectly across games. Maintain muscle memory when switching between Valorant, CS2, Apex Legends, and more."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-8">
+            <a href="/tools" class="text-brand-orange hover:brightness-110 inline-flex items-center mb-4">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+              Back to Tools
+            </a>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-brand-white">
+              Sensitivity Translator
+            </h1>
+            <p class="text-brand-gray text-lg">
+              Convert your mouse sensitivity across games to maintain perfect muscle memory
+            </p>
+          </div>
+
+          <!-- Calculator -->
+          <div class="card mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-brand-white">Sensitivity Converter</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <!-- Source Game -->
+              <div>
+                <h3 class="text-lg font-bold mb-4 text-brand-orange">From</h3>
+                <div class="space-y-4">
+                  <div>
+                    <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">Source Game</label>
+                    <select id="source-game" class="w-full appearance-none bg-gradient-to-br from-brand-gray-dark to-brand-black border border-brand-gray/30 hover:border-brand-orange text-gray-200 px-5 py-4 rounded-xl shadow-lg shadow-black/20 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all duration-300 cursor-pointer text-base font-medium backdrop-blur-sm" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23ff6900%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25em; padding-right: 3rem; color-scheme: dark;">
+                      <option value="valorant" class="bg-brand-gray-dark text-gray-200">Valorant</option>
+                      <option value="cs2" class="bg-brand-gray-dark text-gray-200">Counter-Strike 2</option>
+                      <option value="apex" class="bg-brand-gray-dark text-gray-200">Apex Legends</option>
+                      <option value="overwatch" class="bg-brand-gray-dark text-gray-200">Overwatch 2</option>
+                      <option value="fortnite" class="bg-brand-gray-dark text-gray-200">Fortnite</option>
+                      <option value="cod" class="bg-brand-gray-dark text-gray-200">Call of Duty</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">In-Game Sensitivity</label>
+                    <input type="number" id="source-sens" step="0.01" value="0.5" class="w-full bg-gradient-to-br from-brand-gray-dark to-brand-black border border-brand-gray/30 hover:border-brand-orange text-gray-200 px-5 py-4 rounded-xl shadow-lg shadow-black/20 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all duration-300 text-base font-medium backdrop-blur-sm" style="color-scheme: dark;" />
+                  </div>
+
+                  <div>
+                    <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">Mouse DPI</label>
+                    <input type="number" id="source-dpi" value="800" class="w-full bg-gradient-to-br from-brand-gray-dark to-brand-black border border-brand-gray/30 hover:border-brand-orange text-gray-200 px-5 py-4 rounded-xl shadow-lg shadow-black/20 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all duration-300 text-base font-medium backdrop-blur-sm" style="color-scheme: dark;" />
+                  </div>
+
+                  <div class="bg-brand-gray-dark/30 rounded-lg p-4">
+                    <p class="text-brand-gray text-sm mb-1">Effective DPI (eDPI)</p>
+                    <p class="text-brand-white font-bold text-2xl" id="source-edpi">400</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Target Game -->
+              <div>
+                <h3 class="text-lg font-bold mb-4 text-brand-purple">To</h3>
+                <div class="space-y-4">
+                  <div>
+                    <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">Target Game</label>
+                    <select id="target-game" class="w-full appearance-none bg-gradient-to-br from-brand-gray-dark to-brand-black border border-brand-gray/30 hover:border-brand-purple text-gray-200 px-5 py-4 rounded-xl shadow-lg shadow-black/20 focus:outline-none focus:ring-2 focus:ring-brand-purple/50 focus:border-brand-purple transition-all duration-300 cursor-pointer text-base font-medium backdrop-blur-sm" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23a855f7%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25em; padding-right: 3rem; color-scheme: dark;">
+                      <option value="valorant" class="bg-brand-gray-dark text-gray-200">Valorant</option>
+                      <option value="cs2" selected class="bg-brand-gray-dark text-gray-200">Counter-Strike 2</option>
+                      <option value="apex" class="bg-brand-gray-dark text-gray-200">Apex Legends</option>
+                      <option value="overwatch" class="bg-brand-gray-dark text-gray-200">Overwatch 2</option>
+                      <option value="fortnite" class="bg-brand-gray-dark text-gray-200">Fortnite</option>
+                      <option value="cod" class="bg-brand-gray-dark text-gray-200">Call of Duty</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">Converted Sensitivity</label>
+                    <div class="relative">
+                      <input type="text" id="target-sens" readonly value="0.50" class="w-full bg-gradient-to-br from-brand-purple/30 to-brand-purple/10 border border-brand-purple/50 text-brand-white px-5 py-4 rounded-xl shadow-lg shadow-purple-500/10 font-bold text-xl backdrop-blur-sm" />
+                      <button id="copy-sens-btn" class="absolute right-4 top-1/2 -translate-y-1/2 text-brand-purple hover:text-brand-white transition-colors p-2 hover:bg-brand-purple/20 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">Mouse DPI</label>
+                    <input type="number" id="target-dpi" value="800" class="w-full bg-gradient-to-br from-brand-gray-dark to-brand-black border border-brand-gray/30 hover:border-brand-purple text-brand-white px-5 py-4 rounded-xl shadow-lg shadow-black/20 focus:outline-none focus:ring-2 focus:ring-brand-purple/50 focus:border-brand-purple transition-all duration-300 text-base font-medium backdrop-blur-sm" />
+                  </div>
+
+                  <div class="bg-brand-purple/10 border border-brand-purple/30 rounded-lg p-4">
+                    <p class="text-brand-gray text-sm mb-1">Effective DPI (eDPI)</p>
+                    <p class="text-brand-purple font-bold text-2xl" id="target-edpi">400</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex justify-center">
+              <button id="convert-btn" class="btn-primary bg-brand-orange hover:bg-brand-orange-hover">
+                Convert Sensitivity
+              </button>
+            </div>
+          </div>
+
+          <!-- 360 Distance Calculator -->
+          <div class="card mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-brand-white">360° Distance</h2>
+            <p class="text-brand-gray mb-4">How far you need to move your mouse for a full 360° turn</p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="bg-brand-gray-dark/30 rounded-lg p-4 text-center">
+                <p class="text-brand-gray text-sm mb-2">Source Game</p>
+                <p class="text-brand-orange font-bold text-3xl" id="source-360">--</p>
+                <p class="text-brand-gray text-xs mt-1">centimeters</p>
+              </div>
+              <div class="bg-brand-gray-dark/30 rounded-lg p-4 text-center">
+                <p class="text-brand-gray text-sm mb-2">Target Game</p>
+                <p class="text-brand-purple font-bold text-3xl" id="target-360">--</p>
+                <p class="text-brand-gray text-xs mt-1">centimeters</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Popular Pro Settings -->
+          <div class="card mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-brand-white">Popular Pro Player Settings</h2>
+            <p class="text-brand-gray mb-4">Compare your settings to professional players</p>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left">
+                <thead>
+                  <tr class="border-b border-brand-gray-dark">
+                    <th class="pb-3 text-brand-gray text-sm font-bold">Player</th>
+                    <th class="pb-3 text-brand-gray text-sm font-bold">Game</th>
+                    <th class="pb-3 text-brand-gray text-sm font-bold">DPI</th>
+                    <th class="pb-3 text-brand-gray text-sm font-bold">Sensitivity</th>
+                    <th class="pb-3 text-brand-gray text-sm font-bold">eDPI</th>
+                  </tr>
+                </thead>
+                <tbody class="text-brand-gray">
+                  <tr class="border-b border-brand-gray-dark/50">
+                    <td class="py-3 text-brand-white font-semibold">TenZ</td>
+                    <td class="py-3">Valorant</td>
+                    <td class="py-3">800</td>
+                    <td class="py-3">0.27</td>
+                    <td class="py-3 text-brand-orange font-bold">216</td>
+                  </tr>
+                  <tr class="border-b border-brand-gray-dark/50">
+                    <td class="py-3 text-brand-white font-semibold">s1mple</td>
+                    <td class="py-3">CS2</td>
+                    <td class="py-3">400</td>
+                    <td class="py-3">3.09</td>
+                    <td class="py-3 text-brand-orange font-bold">1236</td>
+                  </tr>
+                  <tr class="border-b border-brand-gray-dark/50">
+                    <td class="py-3 text-brand-white font-semibold">ImperialHal</td>
+                    <td class="py-3">Apex Legends</td>
+                    <td class="py-3">800</td>
+                    <td class="py-3">1.6</td>
+                    <td class="py-3 text-brand-orange font-bold">1280</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 text-brand-white font-semibold">Bugha</td>
+                    <td class="py-3">Fortnite</td>
+                    <td class="py-3">400</td>
+                    <td class="py-3">10.0</td>
+                    <td class="py-3 text-brand-orange font-bold">4000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- QR Code Generator -->
+          <div class="card">
+            <h2 class="text-2xl font-bold mb-4 text-brand-white">Gaming Center Quick Setup</h2>
+            <p class="text-brand-gray mb-4">Generate a QR code with your settings to quickly set up at Gladiator Games</p>
+            <button id="generate-qr-btn" class="btn-primary bg-brand-cyan hover:bg-brand-purple">
+              Generate QR Code
+            </button>
+            <div id="qr-code-container" class="mt-4 hidden text-center">
+              <div class="inline-block bg-white p-4 rounded-lg">
+                <div id="qr-code"></div>
+              </div>
+              <p class="text-brand-gray text-sm mt-2">Scan this at our gaming center to auto-apply your settings</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gradient-to-r from-brand-orange/10 via-brand-purple/10 to-brand-cyan/10 rounded-lg p-6 border border-brand-orange/30">
+            <div class="flex items-center justify-center mb-4">
+              <div class="w-3 h-3 bg-brand-orange rounded-full animate-pulse mr-2"></div>
+              <h2 class="text-2xl md:text-3xl font-bold text-brand-white">Perfect Your Aim</h2>
+            </div>
+            <p class="text-brand-gray text-center mb-6">
+              Visit Gladiator Games to practice with your perfect sensitivity on our high-performance gaming PCs
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/visit" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange">
+                Visit Us Today
+              </a>
+              <a href="/tools" class="btn-primary bg-brand-black border-2 border-brand-orange-hover text-brand-orange-hover hover:bg-brand-orange-hover hover:text-brand-white">
+                More Tools
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  interface GameConfig {
+    name: string;
+    fov: number; // Field of view
+    yawMultiplier: number; // Used for conversion
+  }
+
+  const gameConfigs: Record<string, GameConfig> = {
+    valorant: { name: 'Valorant', fov: 103, yawMultiplier: 0.07 },
+    cs2: { name: 'Counter-Strike 2', fov: 90, yawMultiplier: 0.022 },
+    apex: { name: 'Apex Legends', fov: 110, yawMultiplier: 0.022 },
+    overwatch: { name: 'Overwatch 2', fov: 103, yawMultiplier: 0.0066 },
+    fortnite: { name: 'Fortnite', fov: 80, yawMultiplier: 0.5555 },
+    cod: { name: 'Call of Duty', fov: 120, yawMultiplier: 0.0066 },
+  };
+
+  function calculate360Distance(dpi: number, sens: number, yawMultiplier: number): number {
+    // Formula: cm/360 = (360 / (DPI * sens * yawMultiplier)) * 2.54
+    const inches = 360 / (dpi * sens * yawMultiplier);
+    return Math.round(inches * 2.54 * 10) / 10; // Convert to cm
+  }
+
+  function convertSensitivity(sourceSens: number, sourceDPI: number, targetDPI: number, sourceGame: string, targetGame: string): number {
+    const sourceConfig = gameConfigs[sourceGame];
+    const targetConfig = gameConfigs[targetGame];
+
+    // Calculate cm/360 for source
+    const cm360 = calculate360Distance(sourceDPI, sourceSens, sourceConfig.yawMultiplier);
+
+    // Calculate target sensitivity for same cm/360
+    const targetSens = 360 / ((cm360 / 2.54) * targetDPI * targetConfig.yawMultiplier);
+
+    return Math.round(targetSens * 1000) / 1000; // Round to 3 decimal places
+  }
+
+  function updateCalculations() {
+    const sourceGame = (document.getElementById('source-game') as HTMLSelectElement).value;
+    const sourceSens = parseFloat((document.getElementById('source-sens') as HTMLInputElement).value);
+    const sourceDPI = parseInt((document.getElementById('source-dpi') as HTMLInputElement).value);
+
+    const targetGame = (document.getElementById('target-game') as HTMLSelectElement).value;
+    const targetDPI = parseInt((document.getElementById('target-dpi') as HTMLInputElement).value);
+
+    // Calculate eDPI
+    const sourceEDPI = Math.round(sourceDPI * sourceSens);
+    const targetSens = convertSensitivity(sourceSens, sourceDPI, targetDPI, sourceGame, targetGame);
+    const targetEDPI = Math.round(targetDPI * targetSens);
+
+    // Update displays
+    document.getElementById('source-edpi')!.textContent = sourceEDPI.toString();
+    document.getElementById('target-edpi')!.textContent = targetEDPI.toString();
+    document.getElementById('target-sens')!.textContent = targetSens.toFixed(3);
+
+    // Calculate 360 distances
+    const source360 = calculate360Distance(sourceDPI, sourceSens, gameConfigs[sourceGame].yawMultiplier);
+    const target360 = calculate360Distance(targetDPI, targetSens, gameConfigs[targetGame].yawMultiplier);
+
+    document.getElementById('source-360')!.textContent = source360.toFixed(1);
+    document.getElementById('target-360')!.textContent = target360.toFixed(1);
+  }
+
+  // Event listeners
+  document.getElementById('convert-btn')?.addEventListener('click', updateCalculations);
+
+  ['source-game', 'source-sens', 'source-dpi', 'target-game', 'target-dpi'].forEach(id => {
+    document.getElementById(id)?.addEventListener('change', updateCalculations);
+    document.getElementById(id)?.addEventListener('input', updateCalculations);
+  });
+
+  // Copy sensitivity
+  document.getElementById('copy-sens-btn')?.addEventListener('click', () => {
+    const targetSens = (document.getElementById('target-sens') as HTMLInputElement).value;
+    navigator.clipboard.writeText(targetSens);
+
+    const btn = document.getElementById('copy-sens-btn')!;
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+    }, 1000);
+  });
+
+  // QR Code generation
+  document.getElementById('generate-qr-btn')?.addEventListener('click', () => {
+    const sourceGame = (document.getElementById('source-game') as HTMLSelectElement).value;
+    const sourceSens = (document.getElementById('source-sens') as HTMLInputElement).value;
+    const sourceDPI = (document.getElementById('source-dpi') as HTMLInputElement).value;
+    const targetGame = (document.getElementById('target-game') as HTMLSelectElement).value;
+    const targetSens = (document.getElementById('target-sens') as HTMLInputElement).value;
+    const targetDPI = (document.getElementById('target-dpi') as HTMLInputElement).value;
+
+    const settingsData = {
+      source: { game: sourceGame, sens: sourceSens, dpi: sourceDPI },
+      target: { game: targetGame, sens: targetSens, dpi: targetDPI },
+    };
+
+    // In a real implementation, you would use a QR code library here
+    const qrContainer = document.getElementById('qr-code')!;
+    qrContainer.innerHTML = `
+      <div class="w-48 h-48 bg-brand-gray-dark flex items-center justify-center">
+        <p class="text-brand-gray text-sm text-center px-4">
+          QR Code Generation<br/>
+          <span class="text-xs">(Requires QR library)</span><br/><br/>
+          <span class="text-xs font-mono">${JSON.stringify(settingsData, null, 2)}</span>
+        </p>
+      </div>
+    `;
+
+    document.getElementById('qr-code-container')!.classList.remove('hidden');
+  });
+
+  // Initial calculation
+  updateCalculations();
+</script>
+</Layout>

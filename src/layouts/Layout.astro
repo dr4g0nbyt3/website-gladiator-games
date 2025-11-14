@@ -4,9 +4,19 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  type?: string;
 }
 
-const { title, description = 'Gladiator Games - Competitive Gaming Platform' } = Astro.props;
+const {
+  title,
+  description = 'Gladiator Games - Premier competitive gaming center in Jefferson City, Missouri. 100+ games, high-performance PCs, tournaments, and community events.',
+  image = '/images/branding/logo-white.png',
+  type = 'website'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL(image, Astro.site);
 ---
 
 <!doctype html>
@@ -22,7 +32,29 @@ const { title, description = 'Gladiator Games - Competitive Gaming Platform' } =
     <link rel="mask-icon" href="/favicon.svg" color="#ff6900" />
     <meta name="theme-color" content="#000000" />
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
     <title>{title}</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:site_name" content="Gladiator Games" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+
+    <!-- Additional head content -->
+    <slot name="head" />
   </head>
   <body>
     <slot />

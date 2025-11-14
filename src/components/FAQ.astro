@@ -2,43 +2,51 @@
 const faqs = [
   {
     question: "What are your pricing options?",
-    answer: "We offer flexible pricing to fit your gaming style: $32/month for unlimited gaming with our membership, $10/hour for drop-in gaming, or $20 for a full-day pass. Members get unlimited play time and access to exclusive events!"
+    answer: "We offer three membership tiers and flexible drop-in options:<br><br><strong>Memberships:</strong><br>• <strong>16-bit:</strong> $32/month - Unlimited gaming<br>• <strong>32-bit:</strong> $52/month - Unlimited gaming + 1 free guest pass/month<br>• <strong>64-bit:</strong> $80/month - Unlimited gaming + 2 free guest passes/month<br><br><strong>Drop-in:</strong><br>• $10/hour - Perfect for casual gaming<br>• $20/day - Full day of unlimited play<br><br>All memberships include access to our complete game library, exclusive tournaments, and member-only events!"
   },
   {
     question: "What kind of equipment do you have?",
-    answer: "Our gaming stations feature mid to high-end gaming PCs with RTX 3060-4070 graphics cards, ensuring smooth performance for all modern games. All stations include high-refresh-rate monitors, gaming keyboards, mice, and headsets."
-  },
-  {
-    question: "Do I need to make a reservation?",
-    answer: "Walk-ins are always welcome! While reservations aren't required, you can contact us to check availability during peak hours or book a station in advance for groups and events."
-  },
-  {
-    question: "What's your age policy?",
-    answer: "Gamers 16 and older can visit solo. Anyone under 16 must be accompanied by a parent or guardian. We're a welcoming, family-friendly environment for gamers of all skill levels."
-  },
-  {
-    question: "Can I bring my own keyboard, mouse, or headset?",
-    answer: "Absolutely! You're welcome to bring your own peripherals if you prefer your personal setup. We want you to game at your best."
-  },
-  {
-    question: "What about food and drinks?",
-    answer: "Gladiator Games is located at Strikers, which offers a full menu of delicious food and drinks. Check out their <a href='https://www.strikersjc.com/eat' target='_blank' rel='noopener noreferrer' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>food menu</a> and <a href='https://www.strikersjc.com/drink' target='_blank' rel='noopener noreferrer' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>drink menu</a> to see what's available. You can enjoy snacks, meals, and beverages while you game. Outside food and drinks are not permitted."
-  },
-  {
-    question: "Do you host tournaments and events?",
-    answer: "Yes! We regularly host <a href='/events' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>tournaments and special gaming events</a> like our Retro Night. Follow us on social media or check our <a href='/events' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>Events section</a> to stay updated on upcoming competitions and community gatherings."
-  },
-  {
-    question: "Do you offer gaming coaching or lessons?",
-    answer: "Yes, we offer coaching for various competitive games. Contact us at info@gladiatorgames.net or call (573) 338-1481 to inquire about available games, schedules, and rates."
-  },
-  {
-    question: "Can I book a private party or group event?",
-    answer: "Absolutely! We have private party rooms available for birthdays, team events, and group gaming sessions. <a href='/contact' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>Contact us</a> to discuss your event needs and book your space."
+    answer: "We don't compromise on performance! Our gaming stations feature:<br><br>• <strong>GPU:</strong> NVIDIA RTX 4060 (144+ FPS on all games)<br>• <strong>CPU:</strong> Intel Core i5-12600K<br>• <strong>RAM:</strong> 32GB DDR4<br>• <strong>Storage:</strong> 2.75TB NVMe SSD<br>• <strong>Monitors:</strong> 144Hz+ high-refresh displays<br>• <strong>Peripherals:</strong> Gaming keyboards, mice, and headsets<br>• <strong>VR:</strong> Meta Quest 2 headsets available<br>• <strong>Network:</strong> Enterprise-grade internet (~24ms average ping)<br><br>Check out our <a href='/specs' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>full specs page</a> for detailed specifications!"
   },
   {
     question: "What games can I play?",
-    answer: "We have <a href='/games' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>over 100 games in our library</a>! This includes popular titles like Minecraft, Rocket League, Valorant, League of Legends, Apex Legends, Dota 2, Counter-Strike, Fortnite, and many more. If there's a specific game you're looking for, just ask!"
+    answer: "We have <a href='/games' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>over 100 games in our library</a> across all genres! Including:<br><br><strong>Competitive:</strong> Valorant, League of Legends, Counter-Strike 2, Apex Legends, Overwatch 2, Rocket League, Dota 2, Fortnite<br><br><strong>Survival & Sandbox:</strong> Minecraft, Rust, Terraria, ARK, Valheim<br><br><strong>Co-op & Social:</strong> Among Us, Fall Guys, Lethal Company, Content Warning<br><br><strong>VR Games:</strong> Beat Saber, Half-Life: Alyx, Superhot VR, and more<br><br>Don't see your game? Just ask - we're always adding new titles! You can also use our <a href='/tools' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>gaming tools</a> to optimize your experience."
+  },
+  {
+    question: "Do you host parties and private events?",
+    answer: "Absolutely! We specialize in unforgettable gaming parties and events:<br><br><strong>Party Types:</strong><br>• <a href='/parties/birthday' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>Birthday Parties</a> - Make their special day legendary<br>• <a href='/parties/bachelor' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>Bachelor Parties</a> - Epic gaming send-offs<br>• <a href='/parties/corporate' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>Corporate Events</a> - Team building done right<br>• <a href='/parties/tournaments' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>Private Tournaments</a> - Custom competitions<br><br><strong>Pricing:</strong><br>• Small Room (up to 12 people): $200<br>• Large Room (13-24 people): $400<br><br>Includes private space, dedicated staff, and full game library access. <a href='/parties' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>View party packages</a> or call (573) 338-1481 to book!"
+  },
+  {
+    question: "Do you host tournaments and events?",
+    answer: "Yes! We're the competitive gaming hub of Jefferson City with regular events:<br><br><strong>Tournaments:</strong><br>• Super Smash Bros. Ultimate<br>• Rocket League<br>• League of Legends<br>• And rotating featured games<br><br><strong>Special Events:</strong><br>• Game Launch Watch Parties<br>• Retro Gaming Nights<br>• Community Game Nights<br>• Charity Streams<br><br>Follow us on <a href='https://discord.gg/PaHrQj2yzv' target='_blank' rel='noopener noreferrer' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>Discord</a> and <a href='https://www.twitch.tv/gladiatorgamesgamingcafe' target='_blank' rel='noopener noreferrer' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>Twitch</a>, or check our <a href='/events' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>Events page</a> for upcoming tournaments!"
+  },
+  {
+    question: "Do you have game servers we can play on?",
+    answer: "Yes! We host dedicated game servers for our community:<br><br>• <strong>Minecraft:</strong> Active server - <a href='/servers' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>Get IP & join now</a><br>• <strong>Rust:</strong> Coming soon<br>• <strong>Terraria:</strong> Coming soon<br><br>All servers have clear community rules, active moderation, and regular events. Check our <a href='/servers' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>Servers page</a> for connection details and server rules!"
+  },
+  {
+    question: "What about food and drinks?",
+    answer: "Gladiator Games is located inside Strikers, which offers a full menu of delicious food and drinks delivered right to your gaming station! Check out their <a href='https://www.strikersjc.com/eat' target='_blank' rel='noopener noreferrer' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>food menu</a> and <a href='https://www.strikersjc.com/drink' target='_blank' rel='noopener noreferrer' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>drink menu</a> for options including appetizers, burgers, pizzas, and beverages. Outside food and drinks are not permitted."
+  },
+  {
+    question: "Do I need to make a reservation?",
+    answer: "Walk-ins are always welcome! Reservations aren't required, but during peak hours (evenings and weekends), calling ahead is recommended. For parties and large groups, advance booking is required. Contact us at (573) 338-1481 or <a href='/contact' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>via our contact page</a>."
+  },
+  {
+    question: "Can I bring my own keyboard, mouse, or headset?",
+    answer: "Absolutely! We encourage it! Bring your own peripherals (BYOP) to use your preferred setup. Our stations have USB ports and standard connections for keyboards, mice, headsets, and controllers. Game at your competitive best with your own gear!"
+  },
+  {
+    question: "What's your age policy?",
+    answer: "Gamers 16 and older can visit solo. Anyone under 16 must be accompanied by a parent or guardian. We're a welcoming, family-friendly environment for gamers of all ages and skill levels. Perfect for introducing kids to competitive gaming in a safe, monitored space!"
+  },
+  {
+    question: "Do you offer coaching or help for new players?",
+    answer: "Yes! We offer coaching for various competitive games including League of Legends, Valorant, Counter-Strike 2, and more. Our staff can also help new players get started with any game. Contact us at info@gladiatorgames.net or call (573) 338-1481 to inquire about coaching schedules and rates."
+  },
+  {
+    question: "What makes Gladiator Games different from gaming at home?",
+    answer: "Great question! Here's what sets us apart:<br><br>• <strong>Performance:</strong> RTX 4060 PCs with ~24ms ping (use our <a href='/tools/ping-predictor' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>Ping Predictor</a> to compare)<br>• <strong>Community:</strong> Meet fellow gamers, make friends, join our Discord<br>• <strong>Convenience:</strong> No downloads, updates, or hardware maintenance<br>• <strong>Try Before You Buy:</strong> Test games before purchasing<br>• <strong>Competitive Edge:</strong> Optimized setups for tournaments<br>• <strong>Social Space:</strong> Game together IRL, not just online<br><br>We also have <a href='/tools' class='text-brand-orange hover:brightness-110 no-underline font-semibold'>free gaming tools</a> like sensitivity calculators and frame rate analyzers!"
   }
 ];
 ---

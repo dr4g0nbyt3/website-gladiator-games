@@ -1,0 +1,502 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Ergo-Setup Scanner - Gladiator Games"
+  description="Analyze your gaming setup for ergonomic issues. Get personalized recommendations to improve comfort and prevent gaming-related injuries."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-8">
+            <a href="/tools" class="text-brand-orange hover:brightness-110 inline-flex items-center mb-4">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+              Back to Tools
+            </a>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-brand-white">
+              Ergo-Setup Scanner
+            </h1>
+            <p class="text-brand-gray text-lg">
+              Optimize your gaming setup to prevent pain and improve performance
+            </p>
+          </div>
+
+          <!-- Setup Questionnaire -->
+          <div class="card mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-brand-white">Your Gaming Setup</h2>
+            <div class="space-y-6">
+              <!-- Desk Height -->
+              <div>
+                <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">
+                  Desk Height
+                  <span class="text-brand-orange ml-1">*</span>
+                </label>
+                <select id="desk-height" class="w-full appearance-none bg-gradient-to-br from-brand-gray-dark to-brand-black border border-brand-gray/30 hover:border-brand-orange text-gray-200 px-5 py-4 rounded-xl shadow-lg shadow-black/20 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all duration-300 cursor-pointer text-base font-medium backdrop-blur-sm" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23ff6900%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25em; padding-right: 3rem; color-scheme: dark;">
+                  <option value="too-low">Too Low (knees hit desk)</option>
+                  <option value="low">Slightly Low (legs cramped)</option>
+                  <option value="perfect" selected>Perfect (elbows at 90°)</option>
+                  <option value="high">Slightly High (shoulders raised)</option>
+                  <option value="too-high">Too High (arms angled up)</option>
+                </select>
+              </div>
+
+              <!-- Chair Type -->
+              <div>
+                <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">
+                  Chair Type
+                  <span class="text-brand-orange ml-1">*</span>
+                </label>
+                <select id="chair-type" class="w-full appearance-none bg-gradient-to-br from-brand-gray-dark to-brand-black border border-brand-gray/30 hover:border-brand-orange text-gray-200 px-5 py-4 rounded-xl shadow-lg shadow-black/20 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all duration-300 cursor-pointer text-base font-medium backdrop-blur-sm" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23ff6900%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25em; padding-right: 3rem; color-scheme: dark;">
+                  <option value="gaming">Gaming Chair (lumbar support)</option>
+                  <option value="office">Office Chair (back support)</option>
+                  <option value="basic" selected>Basic Office Chair</option>
+                  <option value="dining">Dining/Kitchen Chair</option>
+                  <option value="couch">Couch/Soft Chair</option>
+                </select>
+              </div>
+
+              <!-- Monitor Position -->
+              <div>
+                <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">
+                  Monitor Eye Level
+                  <span class="text-brand-orange ml-1">*</span>
+                </label>
+                <select id="monitor-level" class="w-full appearance-none bg-gradient-to-br from-brand-gray-dark to-brand-black border border-brand-gray/30 hover:border-brand-orange text-gray-200 px-5 py-4 rounded-xl shadow-lg shadow-black/20 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all duration-300 cursor-pointer text-base font-medium backdrop-blur-sm" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23ff6900%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25em; padding-right: 3rem; color-scheme: dark;">
+                  <option value="high">Too High (looking up)</option>
+                  <option value="perfect" selected>Perfect (eye level)</option>
+                  <option value="low">Too Low (looking down)</option>
+                  <option value="very-low">Very Low (chin to chest)</option>
+                </select>
+              </div>
+
+              <!-- Monitor Distance -->
+              <div>
+                <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">
+                  Monitor Distance
+                  <span class="text-brand-orange ml-1">*</span>
+                </label>
+                <select id="monitor-distance" class="w-full appearance-none bg-gradient-to-br from-brand-gray-dark to-brand-black border border-brand-gray/30 hover:border-brand-orange text-gray-200 px-5 py-4 rounded-xl shadow-lg shadow-black/20 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all duration-300 cursor-pointer text-base font-medium backdrop-blur-sm" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23ff6900%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25em; padding-right: 3rem; color-scheme: dark;">
+                  <option value="too-close">Too Close (&lt;1 arm's length)</option>
+                  <option value="close">Slightly Close</option>
+                  <option value="perfect" selected>Perfect (arm's length)</option>
+                  <option value="far">Slightly Far</option>
+                  <option value="too-far">Too Far (leaning forward)</option>
+                </select>
+              </div>
+
+              <!-- Keyboard Position -->
+              <div>
+                <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">
+                  Keyboard/Mouse Position
+                  <span class="text-brand-orange ml-1">*</span>
+                </label>
+                <select id="keyboard-position" class="w-full appearance-none bg-gradient-to-br from-brand-gray-dark to-brand-black border border-brand-gray/30 hover:border-brand-orange text-gray-200 px-5 py-4 rounded-xl shadow-lg shadow-black/20 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all duration-300 cursor-pointer text-base font-medium backdrop-blur-sm" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23ff6900%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25em; padding-right: 3rem; color-scheme: dark;">
+                  <option value="perfect" selected>Perfect (elbows 90°, wrists straight)</option>
+                  <option value="wrists-bent">Wrists Bent Upward</option>
+                  <option value="reaching">Reaching Forward (hunched)</option>
+                  <option value="too-high">Too High (arms angled up)</option>
+                  <option value="too-low">Too Low (arms angled down)</option>
+                </select>
+              </div>
+
+              <!-- Posture -->
+              <div>
+                <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">
+                  Gaming Posture
+                  <span class="text-brand-orange ml-1">*</span>
+                </label>
+                <select id="posture" class="w-full appearance-none bg-gradient-to-br from-brand-gray-dark to-brand-black border border-brand-gray/30 hover:border-brand-orange text-gray-200 px-5 py-4 rounded-xl shadow-lg shadow-black/20 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all duration-300 cursor-pointer text-base font-medium backdrop-blur-sm" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23ff6900%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25em; padding-right: 3rem; color-scheme: dark;">
+                  <option value="upright">Upright (back against chair)</option>
+                  <option value="slight-lean" selected>Slight Forward Lean</option>
+                  <option value="hunched">Hunched Forward</option>
+                  <option value="slouched">Slouched/Reclined</option>
+                </select>
+              </div>
+
+              <!-- Gaming Duration -->
+              <div>
+                <label class="block text-brand-white text-xs font-semibold uppercase tracking-wider mb-3">
+                  Session Length
+                  <span class="text-brand-orange ml-1">*</span>
+                </label>
+                <select id="duration" class="w-full appearance-none bg-gradient-to-br from-brand-gray-dark to-brand-black border border-brand-gray/30 hover:border-brand-orange text-gray-200 px-5 py-4 rounded-xl shadow-lg shadow-black/20 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all duration-300 cursor-pointer text-base font-medium backdrop-blur-sm" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23ff6900%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25em; padding-right: 3rem; color-scheme: dark;">
+                  <option value="short">1-2 hours</option>
+                  <option value="medium" selected>2-4 hours</option>
+                  <option value="long">4-6 hours</option>
+                  <option value="marathon">6+ hours</option>
+                </select>
+              </div>
+
+              <!-- Pain/Discomfort -->
+              <div>
+                <label class="block text-brand-gray text-sm font-bold mb-2">
+                  Do you experience pain or discomfort?
+                </label>
+                <div class="space-y-2">
+                  <label class="flex items-center">
+                    <input type="checkbox" name="pain" value="neck" class="mr-2" />
+                    <span class="text-brand-gray">Neck pain</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="pain" value="back" class="mr-2" />
+                    <span class="text-brand-gray">Back pain</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="pain" value="wrist" class="mr-2" />
+                    <span class="text-brand-gray">Wrist pain</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="pain" value="shoulder" class="mr-2" />
+                    <span class="text-brand-gray">Shoulder pain</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="pain" value="eyes" class="mr-2" />
+                    <span class="text-brand-gray">Eye strain/headaches</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="pain" value="none" class="mr-2" />
+                    <span class="text-brand-gray">No pain or discomfort</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button id="analyze-setup-btn" class="btn-primary bg-brand-orange hover:bg-brand-orange-hover mt-6">
+              Analyze My Setup
+            </button>
+          </div>
+
+          <!-- Results -->
+          <div id="results" class="hidden space-y-8">
+            <!-- Overall Score -->
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Ergonomic Score</h2>
+              <div id="overall-score"></div>
+            </div>
+
+            <!-- Issues Found -->
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Issues Detected</h2>
+              <div id="issues-list"></div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Personalized Recommendations</h2>
+              <div id="recommendations-list"></div>
+            </div>
+
+            <!-- Exercises -->
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Stretches & Exercises</h2>
+              <p class="text-brand-gray mb-4">Do these every hour during long gaming sessions</p>
+              <div id="exercises-list"></div>
+            </div>
+
+            <!-- Ideal Setup Diagram -->
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Ideal Gaming Setup</h2>
+              <div class="bg-brand-gray-dark rounded-lg p-6">
+                <div class="space-y-4 text-brand-gray">
+                  <div class="flex items-start">
+                    <span class="text-brand-orange font-bold mr-3">•</span>
+                    <span><strong class="text-brand-white">Monitor:</strong> Top third at eye level, arm's length away (20-30 inches)</span>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-brand-orange font-bold mr-3">•</span>
+                    <span><strong class="text-brand-white">Chair:</strong> Adjustable height, lumbar support, armrests at desk height</span>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-brand-orange font-bold mr-3">•</span>
+                    <span><strong class="text-brand-white">Desk:</strong> Elbows at 90° when hands on keyboard</span>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-brand-orange font-bold mr-3">•</span>
+                    <span><strong class="text-brand-white">Keyboard:</strong> Flat or slightly negative tilt, wrists straight</span>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-brand-orange font-bold mr-3">•</span>
+                    <span><strong class="text-brand-white">Feet:</strong> Flat on floor or footrest</span>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-brand-orange font-bold mr-3">•</span>
+                    <span><strong class="text-brand-white">Lighting:</strong> Ambient lighting to reduce eye strain, avoid glare on monitor</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gradient-to-r from-brand-orange/10 via-brand-purple/10 to-brand-cyan/10 rounded-lg p-6 border border-brand-orange/30">
+            <div class="flex items-center justify-center mb-4">
+              <div class="w-3 h-3 bg-brand-orange rounded-full animate-pulse mr-2"></div>
+              <h2 class="text-2xl md:text-3xl font-bold text-brand-white">Game in Comfort</h2>
+            </div>
+            <p class="text-brand-gray text-center mb-6">
+              Experience professionally optimized ergonomic gaming setups at Gladiator Games
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/visit" class="btn-primary bg-brand-orange-hover hover:bg-brand-orange">
+                Visit Us Today
+              </a>
+              <a href="/tools" class="btn-primary bg-brand-black border-2 border-brand-orange-hover text-brand-orange-hover hover:bg-brand-orange-hover hover:text-brand-white">
+                More Tools
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.getElementById('analyze-setup-btn')?.addEventListener('click', () => {
+    const deskHeight = (document.getElementById('desk-height') as HTMLSelectElement).value;
+    const chairType = (document.getElementById('chair-type') as HTMLSelectElement).value;
+    const monitorLevel = (document.getElementById('monitor-level') as HTMLSelectElement).value;
+    const monitorDistance = (document.getElementById('monitor-distance') as HTMLSelectElement).value;
+    const keyboardPosition = (document.getElementById('keyboard-position') as HTMLSelectElement).value;
+    const posture = (document.getElementById('posture') as HTMLSelectElement).value;
+    const duration = (document.getElementById('duration') as HTMLSelectElement).value;
+
+    const painPoints = Array.from(document.querySelectorAll('input[name="pain"]:checked'))
+      .map(input => (input as HTMLInputElement).value);
+
+    // Calculate score
+    let score = 100;
+    const issues: Array<{ severity: string; title: string; description: string }> = [];
+    const recommendations: string[] = [];
+
+    // Desk height
+    if (deskHeight !== 'perfect') {
+      score -= 15;
+      issues.push({
+        severity: 'high',
+        title: 'Desk Height Issue',
+        description: 'Your desk height is not optimal. This can lead to shoulder, neck, and wrist strain.',
+      });
+      recommendations.push('Adjust desk height so your elbows are at 90° when typing. Consider a height-adjustable desk.');
+    }
+
+    // Chair
+    if (chairType === 'dining' || chairType === 'couch') {
+      score -= 20;
+      issues.push({
+        severity: 'critical',
+        title: 'Poor Chair Support',
+        description: 'Your chair lacks proper support for long gaming sessions.',
+      });
+      recommendations.push('Invest in a gaming or ergonomic office chair with adjustable lumbar support and armrests.');
+    } else if (chairType === 'basic') {
+      score -= 10;
+      issues.push({
+        severity: 'medium',
+        title: 'Limited Chair Support',
+        description: 'Your chair could provide better support.',
+      });
+      recommendations.push('Add a lumbar cushion and consider upgrading to a chair with better adjustability.');
+    }
+
+    // Monitor level
+    if (monitorLevel !== 'perfect') {
+      score -= 15;
+      issues.push({
+        severity: 'high',
+        title: 'Monitor Height Issue',
+        description: 'Incorrect monitor height causes neck strain and poor posture.',
+      });
+      if (monitorLevel === 'low' || monitorLevel === 'very-low') {
+        recommendations.push('Raise your monitor using a monitor stand or books. Top third should be at eye level.');
+      } else {
+        recommendations.push('Lower your monitor. Top third should be at eye level, not above.');
+      }
+    }
+
+    // Monitor distance
+    if (monitorDistance === 'too-close') {
+      score -= 10;
+      issues.push({
+        severity: 'medium',
+        title: 'Monitor Too Close',
+        description: 'Monitor too close can cause eye strain.',
+      });
+      recommendations.push('Move monitor to arm\\'s length distance (20-30 inches).');
+    } else if (monitorDistance === 'too-far') {
+      score -= 10;
+      issues.push({
+        severity: 'medium',
+        title: 'Monitor Too Far',
+        description: 'Monitor too far causes you to lean forward.',
+      });
+      recommendations.push('Move monitor closer. You should be able to touch the screen with extended arm.');
+    }
+
+    // Keyboard position
+    if (keyboardPosition !== 'perfect') {
+      score -= 15;
+      issues.push({
+        severity: 'high',
+        title: 'Keyboard/Mouse Position Issue',
+        description: 'Poor keyboard position can lead to carpal tunnel and wrist pain.',
+      });
+      recommendations.push('Position keyboard so elbows are at 90° and wrists are straight. Consider a wrist rest.');
+    }
+
+    // Posture
+    if (posture === 'hunched') {
+      score -= 20;
+      issues.push({
+        severity: 'critical',
+        title: 'Poor Posture - Hunched Forward',
+        description: 'Hunching forward puts severe strain on your neck and back.',
+      });
+      recommendations.push('Sit back in your chair with your back fully supported. Bring monitor closer if you lean forward to see.');
+    } else if (posture === 'slouched') {
+      score -= 15;
+      issues.push({
+        severity: 'high',
+        title: 'Poor Posture - Slouching',
+        description: 'Slouching reduces lumbar support and can cause lower back pain.',
+      });
+      recommendations.push('Sit upright with lower back against chair. Use lumbar support cushion if needed.');
+    }
+
+    // Duration warnings
+    if (duration === 'long' || duration === 'marathon') {
+      recommendations.push('Take 5-10 minute breaks every hour. Stand up, stretch, and rest your eyes.');
+      recommendations.push('Follow the 20-20-20 rule: Every 20 minutes, look at something 20 feet away for 20 seconds.');
+    }
+
+    // Pain-specific recommendations
+    if (painPoints.includes('neck')) {
+      recommendations.push('For neck pain: Check monitor height and avoid tilting your head. Do neck stretches.');
+    }
+    if (painPoints.includes('back')) {
+      recommendations.push('For back pain: Improve chair support and sit with back against chair. Strengthen core muscles.');
+    }
+    if (painPoints.includes('wrist')) {
+      recommendations.push('For wrist pain: Keep wrists straight while gaming. Take frequent breaks and do wrist stretches.');
+    }
+    if (painPoints.includes('eyes')) {
+      recommendations.push('For eye strain: Adjust monitor brightness, use blue light filter, take regular breaks.');
+    }
+
+    // Display score
+    let scoreColor = '';
+    let scoreRating = '';
+    if (score >= 85) {
+      scoreColor = 'green';
+      scoreRating = 'Excellent';
+    } else if (score >= 70) {
+      scoreColor = 'yellow';
+      scoreRating = 'Good';
+    } else if (score >= 50) {
+      scoreColor = 'orange';
+      scoreRating = 'Needs Improvement';
+    } else {
+      scoreColor = 'red';
+      scoreRating = 'Poor';
+    }
+
+    document.getElementById('overall-score')!.innerHTML = `
+      <div class="flex items-center justify-between bg-brand-gray-dark/30 rounded-lg p-6">
+        <div>
+          <p class="text-brand-gray text-sm mb-2">Your Score</p>
+          <p class="text-${scoreColor}-500 font-bold text-5xl">${score}/100</p>
+        </div>
+        <div class="text-right">
+          <p class="text-brand-gray text-sm mb-2">Rating</p>
+          <p class="text-${scoreColor}-500 font-bold text-3xl">${scoreRating}</p>
+        </div>
+      </div>
+      <p class="text-brand-gray mt-4">
+        ${score >= 85 ? 'Great job! Your setup is ergonomically sound.' : 'Follow the recommendations below to improve your setup and reduce pain.'}
+      </p>
+    `;
+
+    // Display issues
+    if (issues.length > 0) {
+      document.getElementById('issues-list')!.innerHTML = issues.map(issue => {
+        const severityColors: Record<string, string> = {
+          critical: 'red',
+          high: 'orange',
+          medium: 'yellow',
+        };
+        const color = severityColors[issue.severity];
+
+        return `
+          <div class="bg-${color}-500/10 border border-${color}-500/30 rounded-lg p-4 mb-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-${color}-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+              </svg>
+              <div>
+                <h4 class="font-bold text-brand-white mb-1">${issue.title}</h4>
+                <p class="text-brand-gray text-sm">${issue.description}</p>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    } else {
+      document.getElementById('issues-list')!.innerHTML = `
+        <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-4">
+          <p class="text-green-500">No major issues detected! Your setup looks good.</p>
+        </div>
+      `;
+    }
+
+    // Display recommendations
+    document.getElementById('recommendations-list')!.innerHTML = recommendations.map((rec, index) => `
+      <div class="flex items-start mb-4 p-4 bg-brand-gray-dark/30 rounded-lg">
+        <div class="w-8 h-8 bg-brand-orange/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+          <span class="text-brand-orange font-bold">${index + 1}</span>
+        </div>
+        <p class="text-brand-gray">${rec}</p>
+      </div>
+    `).join('');
+
+    // Display exercises
+    const exercises = [
+      { name: 'Neck Rolls', description: 'Slowly roll your head in circles, 5 times each direction' },
+      { name: 'Shoulder Shrugs', description: 'Raise shoulders to ears, hold 5 seconds, release. Repeat 10 times' },
+      { name: 'Wrist Circles', description: 'Rotate wrists in circles, 10 times each direction' },
+      { name: 'Back Stretch', description: 'Stand and reach arms overhead, lean side to side' },
+      { name: 'Eye Rest', description: 'Close eyes for 30 seconds, then focus on distant object' },
+    ];
+
+    document.getElementById('exercises-list')!.innerHTML = exercises.map(exercise => `
+      <div class="flex items-start mb-4 p-4 bg-brand-gray-dark/30 rounded-lg">
+        <svg class="w-6 h-6 text-brand-cyan mr-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+        <div>
+          <h4 class="font-bold text-brand-white mb-1">${exercise.name}</h4>
+          <p class="text-brand-gray text-sm">${exercise.description}</p>
+        </div>
+      </div>
+    `).join('');
+
+    // Show results
+    document.getElementById('results')!.classList.remove('hidden');
+    document.getElementById('results')!.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>
+</Layout>

@@ -1,0 +1,147 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const tools = [
+  {
+    name: 'Controller Drift Analyzer',
+    slug: 'controller-drift',
+    description: 'Test your controller for stick drift and dead zones. Supports Xbox, PlayStation, Nintendo, and PC controllers.',
+    icon: 'gamepad',
+    color: 'orange',
+  },
+  {
+    name: 'Ping Predictor',
+    slug: 'ping-predictor',
+    description: 'Check expected ping and latency for popular games from your location. Compare home internet vs our gaming center.',
+    icon: 'signal',
+    color: 'purple',
+  },
+  {
+    name: 'Ergo-Setup Scanner',
+    slug: 'ergo-setup',
+    description: 'Analyze your gaming setup for ergonomic issues. Get personalized recommendations to improve comfort and prevent injuries.',
+    icon: 'monitor',
+    color: 'cyan',
+  },
+  {
+    name: 'Frame Drop Detective',
+    slug: 'frame-drop',
+    description: 'Find out why your games are lagging. Get specific hardware upgrade recommendations and optimization tips.',
+    icon: 'chart',
+    color: 'orange',
+  },
+  {
+    name: 'Sensitivity Translator',
+    slug: 'sensitivity',
+    description: 'Convert mouse sensitivity perfectly across games. Maintain muscle memory when switching games or setups.',
+    icon: 'crosshair',
+    color: 'purple',
+  },
+];
+---
+
+<Layout
+  title="Gaming Tools - Gladiator Games"
+  description="Free gaming utility tools for Jefferson City gamers. Test controllers, check ping, analyze your setup, and more."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 text-brand-white">
+            Gaming Tools
+          </h1>
+          <p class="text-xl text-brand-gray mb-8">
+            Free utilities to level up your gaming experience
+          </p>
+          <p class="text-brand-gray">
+            Professional-grade tools built for gamers in Jefferson City and beyond
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <section class="py-16 md:py-24 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tools.map((tool) => {
+            const colorClasses = {
+              border: tool.color === 'orange' ? 'hover:border-brand-orange' : tool.color === 'purple' ? 'hover:border-brand-purple' : 'hover:border-brand-cyan',
+              bgBase: tool.color === 'orange' ? 'bg-brand-orange/20' : tool.color === 'purple' ? 'bg-brand-purple/20' : 'bg-brand-cyan/20',
+              bgHover: tool.color === 'orange' ? 'group-hover:bg-brand-orange/30' : tool.color === 'purple' ? 'group-hover:bg-brand-purple/30' : 'group-hover:bg-brand-cyan/30',
+              text: tool.color === 'orange' ? 'text-brand-orange' : tool.color === 'purple' ? 'text-brand-purple' : 'text-brand-cyan',
+              textHover: tool.color === 'orange' ? 'group-hover:text-brand-orange' : tool.color === 'purple' ? 'group-hover:text-brand-purple' : 'group-hover:text-brand-cyan',
+            };
+
+            return (
+              <a href={`/tools/${tool.slug}`} class={`card group ${colorClasses.border} transition-all transform hover:scale-105 no-underline`}>
+                <div class={`w-16 h-16 ${colorClasses.bgBase} rounded-lg flex items-center justify-center mb-4 ${colorClasses.bgHover} transition-colors`}>
+                  {tool.icon === 'gamepad' && (
+                    <svg class={`w-8 h-8 ${colorClasses.text}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  )}
+                  {tool.icon === 'signal' && (
+                    <svg class={`w-8 h-8 ${colorClasses.text}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                  )}
+                  {tool.icon === 'monitor' && (
+                    <svg class={`w-8 h-8 ${colorClasses.text}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  )}
+                  {tool.icon === 'chart' && (
+                    <svg class={`w-8 h-8 ${colorClasses.text}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                  )}
+                  {tool.icon === 'crosshair' && (
+                    <svg class={`w-8 h-8 ${colorClasses.text}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+                    </svg>
+                  )}
+                </div>
+                <h3 class={`text-xl font-bold mb-2 text-brand-white ${colorClasses.textHover} transition-colors`}>
+                  {tool.name}
+                </h3>
+                <p class="text-brand-gray text-sm">
+                  {tool.description}
+                </p>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-4 text-brand-white">
+            Try Our Tools At The Gaming Center
+          </h2>
+          <p class="text-brand-gray text-lg mb-8">
+            Visit Gladiator Games to test your controller, optimize your setup, and game on our high-performance PCs
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/visit" class="btn-primary bg-brand-orange hover:bg-brand-orange-hover">
+              Plan Your Visit
+            </a>
+            <a href="/contact" class="btn-primary bg-brand-cyan hover:bg-brand-purple">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -191,6 +191,72 @@ const gameImage = getGameImage(game);
       </div>
     </section>
 
+    <!-- Party Section -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="card bg-gradient-to-r from-brand-purple/10 via-brand-orange/10 to-brand-cyan/10 border-brand-orange/30">
+            <h2 class="text-3xl font-bold mb-6 text-brand-white text-center">Host a {game.name} Party!</h2>
+            <p class="text-brand-gray text-center mb-6">
+              Want to celebrate your birthday or special event with {game.name}? We offer party packages
+              that include private gaming sessions, party room access, and more! Mix {game.name} with other
+              popular games from our <a href="/games" class="text-brand-orange hover:brightness-110 no-underline font-semibold">library of 100+ games</a>.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+              <div class="bg-brand-black/50 rounded-lg p-3 text-center border border-brand-orange/30">
+                <div class="text-2xl font-bold text-brand-orange mb-1">$150</div>
+                <p class="text-brand-gray text-xs">1 hour</p>
+              </div>
+              <div class="bg-brand-black/50 rounded-lg p-3 text-center border-2 border-brand-orange">
+                <div class="text-2xl font-bold text-brand-orange mb-1">$300</div>
+                <p class="text-brand-gray text-xs">2 hours</p>
+              </div>
+              <div class="bg-brand-black/50 rounded-lg p-3 text-center border border-brand-orange/30">
+                <div class="text-2xl font-bold text-brand-orange mb-1">$450</div>
+                <p class="text-brand-gray text-xs">3 hours</p>
+              </div>
+              <div class="bg-brand-black/50 rounded-lg p-3 text-center border border-brand-orange/30">
+                <div class="text-2xl font-bold text-brand-orange mb-1">$500</div>
+                <p class="text-brand-gray text-xs">4 hours</p>
+              </div>
+            </div>
+            <ul class="space-y-1 text-brand-gray text-sm mb-4">
+              <li class="flex items-start"><span class="text-brand-orange mr-2">✓</span><span>Up to 10 players</span></li>
+              <li class="flex items-start"><span class="text-brand-orange mr-2">✓</span><span>Staff assistance</span></li>
+            </ul>
+
+            <div class="text-center">
+              {(game.slug === 'minecraft' || game.slug === 'fortnite' || game.slug === 'league-of-legends' || game.slug === 'roblox') ? (
+                <div class="space-y-3">
+                  <p class="text-brand-gray text-sm">
+                    Check out our dedicated {game.name} party page for more details and game-specific activities!
+                  </p>
+                  <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href={`/parties/${game.slug}`} class="btn-primary bg-brand-orange hover:brightness-110">
+                      View {game.name} Party Details
+                    </a>
+                    <a href="/parties" class="btn-primary bg-brand-purple hover:brightness-110">
+                      View All Party Options
+                    </a>
+                  </div>
+                </div>
+              ) : (
+                <div class="space-y-3">
+                  <p class="text-brand-gray text-sm">
+                    Explore all our party options and find the perfect celebration package!
+                  </p>
+                  <a href="/parties" class="btn-primary bg-brand-orange hover:brightness-110">
+                    View All Party Options
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Location Info -->
     <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
       <div class="container-custom">

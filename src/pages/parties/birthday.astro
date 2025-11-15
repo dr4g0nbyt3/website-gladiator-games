@@ -94,137 +94,43 @@ import Footer from '../../components/Footer.astro';
       <div class="container-custom">
         <div class="max-w-6xl mx-auto">
           <h2 class="text-3xl font-bold mb-12 text-brand-white text-center">
-            Birthday Party Packages
+            Birthday Party Pricing
           </h2>
-          <div class="grid md:grid-cols-2 gap-8">
-            <!-- Basic Package -->
-            <div class="card border-2 border-brand-cyan hover:border-brand-cyan transition-colors">
-              <div class="text-center mb-6">
-                <h3 class="text-2xl font-bold text-brand-white mb-2">Basic Party</h3>
-                <p class="text-brand-gray mb-4">Up to 10 players</p>
-                <div class="text-5xl font-bold text-brand-cyan mb-2">$200</div>
-                <p class="text-brand-gray">2 hours</p>
-              </div>
-              <ul class="space-y-3 mb-6">
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-brand-cyan flex-shrink-0 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-brand-gray">Private party room</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-brand-cyan flex-shrink-0 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-brand-gray">10 gaming stations</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-brand-cyan flex-shrink-0 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-brand-gray">Unlimited gaming</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-brand-cyan flex-shrink-0 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-brand-gray">Party room decorations</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-brand-cyan flex-shrink-0 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-brand-gray">Party host assistance</span>
-                </li>
-              </ul>
-            </div>
 
-            <!-- Premium Package -->
-            <div class="card border-2 border-brand-orange-hover hover:border-brand-orange transition-colors relative">
-              <div class="absolute top-0 right-0 bg-brand-orange-hover text-brand-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-                MOST POPULAR
+          <div class="card bg-gradient-to-r from-brand-cyan/10 via-brand-orange/10 to-brand-purple/10 border-brand-orange/30 mb-8">
+            <h3 class="text-2xl font-bold mb-6 text-brand-white text-center">Private Party Rates</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+              <div class="bg-brand-black/50 rounded-lg p-4 text-center">
+                <div class="text-3xl font-bold text-brand-orange mb-2">$150</div>
+                <p class="text-brand-gray text-sm">1 hour</p>
               </div>
-              <div class="text-center mb-6">
-                <h3 class="text-2xl font-bold text-brand-white mb-2">Premium Party</h3>
-                <p class="text-brand-gray mb-4">Up to 20 players</p>
-                <div class="text-5xl font-bold text-brand-orange-hover mb-2">$400</div>
-                <p class="text-brand-gray">2 hours</p>
+              <div class="bg-brand-black/50 rounded-lg p-4 text-center border-2 border-brand-orange">
+                <div class="text-3xl font-bold text-brand-orange mb-2">$300</div>
+                <p class="text-brand-gray text-sm">2 hours</p>
               </div>
-              <ul class="space-y-3 mb-6">
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-brand-orange-hover flex-shrink-0 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-brand-white font-semibold">Everything in Basic, plus:</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-brand-orange-hover flex-shrink-0 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-brand-gray">Larger private room (20 stations)</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-brand-orange-hover flex-shrink-0 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-brand-gray">Premium decorations & setup</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-brand-orange-hover flex-shrink-0 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-brand-gray">Dedicated party coordinator</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-brand-orange-hover flex-shrink-0 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-brand-gray">Custom tournament setup available</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-brand-orange-hover flex-shrink-0 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-brand-gray">Extended time available</span>
-                </li>
-              </ul>
+              <div class="bg-brand-black/50 rounded-lg p-4 text-center">
+                <div class="text-3xl font-bold text-brand-orange mb-2">$450</div>
+                <p class="text-brand-gray text-sm">3 hours</p>
+              </div>
+              <div class="bg-brand-black/50 rounded-lg p-4 text-center">
+                <div class="text-3xl font-bold text-brand-orange mb-2">$500</div>
+                <p class="text-brand-gray text-sm">4 hours</p>
+              </div>
             </div>
-          </div>
-          <p class="text-brand-gray text-center mt-8">
-            Additional hours available for $75/hour (Basic) or $150/hour (Premium)
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Add-Ons -->
-    <section class="py-16 bg-brand-black">
-      <div class="container-custom">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-3xl font-bold mb-12 text-brand-white text-center">
-            Party Add-Ons
-          </h2>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="card">
-              <h3 class="text-xl font-bold text-brand-white mb-2">Pizza Package</h3>
-              <p class="text-brand-gray mb-3">2 large pizzas, drinks for all guests</p>
-              <p class="text-brand-orange font-bold">+$50</p>
-            </div>
-            <div class="card">
-              <h3 class="text-xl font-bold text-brand-white mb-2">Full Meal Package</h3>
-              <p class="text-brand-gray mb-3">Choice of entrees, sides, drinks</p>
-              <p class="text-brand-orange font-bold">+$15/person</p>
-            </div>
-            <div class="card">
-              <h3 class="text-xl font-bold text-brand-white mb-2">Cake Service</h3>
-              <p class="text-brand-gray mb-3">We'll serve your cake with plates & utensils</p>
-              <p class="text-brand-orange font-bold">+$25</p>
-            </div>
-            <div class="card">
-              <h3 class="text-xl font-bold text-brand-white mb-2">Custom Tournament</h3>
-              <p class="text-brand-gray mb-3">Organized tournament with brackets & prizes</p>
-              <p class="text-brand-orange font-bold">+$100</p>
-            </div>
+            <ul class="space-y-2 text-brand-gray text-sm">
+              <li class="flex items-start">
+                <span class="text-brand-orange mr-2">✓</span>
+                <span>Up to 10 players with 10 gaming stations</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-orange mr-2">✓</span>
+                <span>Unlimited gaming on 100+ games</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-orange mr-2">✓</span>
+                <span>Party host assistance throughout your event</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -1,0 +1,104 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Blair Oaks High School eSports - Gladiator Games"
+  description="Blair Oaks High School Falcons esports program information in Wardsville/Jefferson City, Missouri."
+>
+  <Header />
+  <main class="bg-brand-black min-h-screen">
+    <section class="py-20 md:py-32 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="mb-6">
+            <span class="text-brand-cyan font-bold text-lg">Blair Oaks Falcons</span>
+          </div>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 text-brand-white">
+            Blair Oaks High School eSports
+          </h1>
+          <p class="text-xl text-brand-gray mb-8">
+            Home of the Falcons esports program
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">School Information</h2>
+              <div class="space-y-3 text-brand-gray">
+                <div><strong class="text-brand-white">School:</strong> Blair Oaks High School</div>
+                <div><strong class="text-brand-white">Mascot:</strong> Falcons</div>
+                <div><strong class="text-brand-white">Colors:</strong> Columbia Blue & Black</div>
+                <div>
+                  <strong class="text-brand-white">Address:</strong><br />
+                  6124 Falcon Lane<br />
+                  Wardsville, MO 65101
+                </div>
+                <div><strong class="text-brand-white">Phone:</strong> <a href="tel:5736358514" class="text-brand-cyan hover:brightness-110 no-underline">(573) 635-8514</a></div>
+                <div><strong class="text-brand-white">Website:</strong> <a href="https://www.blairoaks.k12.mo.us/" target="_blank" rel="noopener noreferrer" class="text-brand-cyan hover:brightness-110 no-underline">blairoaks.k12.mo.us</a></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Athletic Director</h2>
+              <div class="space-y-3 text-brand-gray">
+                <div><strong class="text-brand-white">Name:</strong> Clay Crouch</div>
+                <div><strong class="text-brand-white">Title:</strong> Activities Director & Assistant Principal</div>
+                <div><strong class="text-brand-white">Email:</strong> <a href="mailto:ccrouch@blairoaks.org" class="text-brand-cyan hover:brightness-110 no-underline">ccrouch@blairoaks.org</a></div>
+                <div class="mt-4 pt-4 border-t border-brand-gray-dark">
+                  <p class="text-sm"><strong class="text-brand-white">Note:</strong> Appointed Activities Director & Assistant Principal in 2021</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="card">
+            <h2 class="text-3xl font-bold mb-6 text-brand-white text-center">eSports Program</h2>
+            <div class="space-y-6 text-brand-gray">
+              <div>
+                <h3 class="text-xl font-bold text-brand-white mb-3">Program Status</h3>
+                <p>Blair Oaks High School is exploring esports opportunities for students. For the most current information about the Falcons esports program, please contact the activities director.</p>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-brand-white mb-3">Interested in Starting a Team?</h3>
+                <p class="mb-4">Students interested in esports at Blair Oaks should:</p>
+                <ul class="space-y-2 ml-6">
+                  <li class="flex items-start"><span class="text-brand-cyan mr-2">•</span><span>Contact Clay Crouch at <a href="mailto:ccrouch@blairoaks.org" class="text-brand-cyan hover:brightness-110 no-underline">ccrouch@blairoaks.org</a></span></li>
+                  <li class="flex items-start"><span class="text-brand-cyan mr-2">•</span><span>Express interest in forming an esports team</span></li>
+                  <li class="flex items-start"><span class="text-brand-cyan mr-2">•</span><span>Connect with other students interested in competitive gaming</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6 text-brand-white">Ready to Build Your eSports Program?</h2>
+          <p class="text-xl text-brand-gray mb-8">Gladiator Games can help your school launch a competitive esports team</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" class="btn-primary bg-brand-orange hover:brightness-110">Contact Us</a>
+            <a href="/esports" class="btn-primary bg-brand-cyan hover:brightness-110">View All Schools</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Jefferson City High School eSports - Gladiator Games"
+  description="Jefferson City High School Jays esports program information, contact details, and competitive gaming opportunities in Jefferson City, Missouri."
+>
+  <Header />
+  <main class="bg-brand-black min-h-screen">
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="mb-6">
+            <span class="text-brand-orange font-bold text-lg">JCHS Jays</span>
+          </div>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 text-brand-white">
+            Jefferson City High School eSports
+          </h1>
+          <p class="text-xl text-brand-gray mb-8">
+            Home of the Jays esports program
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- School Info Section -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- School Information -->
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">School Information</h2>
+              <div class="space-y-3 text-brand-gray">
+                <div>
+                  <strong class="text-brand-white">School:</strong> Jefferson City High School
+                </div>
+                <div>
+                  <strong class="text-brand-white">Mascot:</strong> Jays
+                </div>
+                <div>
+                  <strong class="text-brand-white">Colors:</strong> Blue & Gold
+                </div>
+                <div>
+                  <strong class="text-brand-white">Address:</strong><br />
+                  609 Union St<br />
+                  Jefferson City, MO 65101
+                </div>
+                <div>
+                  <strong class="text-brand-white">Phone:</strong> <a href="tel:5736593050" class="text-brand-orange hover:brightness-110 no-underline">(573) 659-3050</a>
+                </div>
+                <div>
+                  <strong class="text-brand-white">Website:</strong> <a href="https://www.jeffersoncityjays.com/" target="_blank" rel="noopener noreferrer" class="text-brand-orange hover:brightness-110 no-underline">jeffersoncityjays.com</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Athletic Director Contact -->
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Athletic Director</h2>
+              <div class="space-y-3 text-brand-gray">
+                <div>
+                  <strong class="text-brand-white">Name:</strong> Chris Herriman
+                </div>
+                <div>
+                  <strong class="text-brand-white">Title:</strong> Athletic Director
+                </div>
+                <div>
+                  <strong class="text-brand-white">Contact:</strong><br />
+                  For athletic director contact, please call the main school number at (573) 659-3050
+                </div>
+                <div class="mt-4 pt-4 border-t border-brand-gray-dark">
+                  <p class="text-sm">
+                    <strong class="text-brand-white">Note:</strong> Chris Herriman officially became Athletic Director on July 1, 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- eSports Program Section -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="card">
+            <h2 class="text-3xl font-bold mb-6 text-brand-white text-center">eSports Program</h2>
+            <div class="space-y-6 text-brand-gray">
+              <div>
+                <h3 class="text-xl font-bold text-brand-white mb-3">Program Status</h3>
+                <p>
+                  Jefferson City High School competes in high school esports through Missouri-sanctioned leagues and tournaments. For the most current information about the Jays esports program, competitive games, and seasons, please contact the athletic director.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-brand-white mb-3">League Affiliations</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <a href="/esports/mosef" class="card bg-brand-black border-brand-purple hover:border-brand-orange transition-colors no-underline">
+                    <h4 class="font-bold text-brand-white mb-2">MOSEF</h4>
+                    <p class="text-sm">Missouri Scholastic eSports Federation</p>
+                  </a>
+                  <a href="/esports/playvs" class="card bg-brand-black border-brand-purple hover:border-brand-orange transition-colors no-underline">
+                    <h4 class="font-bold text-brand-white mb-2">PlayVS</h4>
+                    <p class="text-sm">National Scholastic eSports Platform</p>
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-brand-white mb-3">Interested in Joining?</h3>
+                <p class="mb-4">
+                  Students interested in joining the Jefferson City High School esports team should:
+                </p>
+                <ul class="space-y-2 ml-6">
+                  <li class="flex items-start">
+                    <span class="text-brand-orange mr-2">•</span>
+                    <span>Contact the athletic director for current season information</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-brand-orange mr-2">•</span>
+                    <span>Check the school athletics website for tryout dates</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-brand-orange mr-2">•</span>
+                    <span>Complete any required athletic participation forms</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gladiator Games Support Section -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="card bg-gradient-to-r from-brand-orange/10 via-brand-purple/10 to-brand-cyan/10 border-brand-orange/30">
+            <h2 class="text-3xl font-bold mb-6 text-brand-white text-center">
+              Practice at Gladiator Games
+            </h2>
+            <p class="text-brand-gray text-center mb-6">
+              JCHS esports teams and individual players are welcome to practice and train at Gladiator Games
+            </p>
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+              <div class="text-center">
+                <div class="w-12 h-12 bg-brand-orange/20 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                  <svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <h3 class="font-bold text-brand-white mb-2">Pro Equipment</h3>
+                <p class="text-brand-gray text-sm">RTX 4060 GPUs, 240Hz monitors, high-end peripherals</p>
+              </div>
+              <div class="text-center">
+                <div class="w-12 h-12 bg-brand-purple/20 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                  <svg class="w-6 h-6 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                  </svg>
+                </div>
+                <h3 class="font-bold text-brand-white mb-2">Team Space</h3>
+                <p class="text-brand-gray text-sm">Dedicated areas for team practice and scrimmages</p>
+              </div>
+              <div class="text-center">
+                <div class="w-12 h-12 bg-brand-cyan/20 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                  <svg class="w-6 h-6 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <h3 class="font-bold text-brand-white mb-2">Low Ping</h3>
+                <p class="text-brand-gray text-sm">~24ms ping for competitive advantage</p>
+              </div>
+            </div>
+            <div class="text-center">
+              <a href="/contact" class="btn-primary bg-brand-orange hover:brightness-110">
+                Contact Us About Team Rates
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6 text-brand-white">
+            Support Local High School eSports
+          </h2>
+          <p class="text-xl text-brand-gray mb-8">
+            Learn more about other high school esports programs in the Jefferson City area
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/esports" class="btn-primary bg-brand-orange hover:brightness-110">
+              View All Schools
+            </a>
+            <a href="/contact" class="btn-primary bg-brand-purple hover:brightness-110">
+              Host a Tournament
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

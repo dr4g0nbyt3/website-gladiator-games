@@ -1,0 +1,210 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schools = [
+  {
+    name: 'Jefferson City High School',
+    mascot: 'Jays',
+    slug: 'jefferson-city',
+    colors: ['Blue', 'Gold'],
+  },
+  {
+    name: 'Helias Catholic High School',
+    mascot: 'Crusaders',
+    slug: 'helias-catholic',
+    colors: ['Purple', 'Gold'],
+  },
+  {
+    name: 'Blair Oaks High School',
+    mascot: 'Falcons',
+    slug: 'blair-oaks',
+    colors: ['Columbia Blue', 'Black'],
+  },
+  {
+    name: 'Capital City High School',
+    mascot: 'Cavaliers',
+    slug: 'capital-city',
+    colors: ['Red', 'White'],
+  },
+];
+
+const organizations = [
+  {
+    name: 'MOSEF',
+    fullName: 'Missouri Scholastic eSports Federation',
+    slug: 'mosef',
+    description: 'Supporting middle and high school esports across Missouri',
+  },
+  {
+    name: 'PlayVS',
+    fullName: 'PlayVS Scholastic eSports Platform',
+    slug: 'playvs',
+    description: 'The nation\'s leading scholastic esports platform',
+  },
+];
+---
+
+<Layout
+  title="High School eSports - Gladiator Games"
+  description="Connect with high school esports programs in Jefferson City, Missouri. Information about MOSEF, PlayVS, and local school esports teams."
+>
+  <Header />
+  <main class="bg-brand-black min-h-screen">
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 text-brand-white">
+            High School eSports
+          </h1>
+          <p class="text-xl text-brand-gray mb-8">
+            Supporting competitive gaming and esports programs in Jefferson City area high schools
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local Schools Section -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-brand-white text-center">Local High Schools</h2>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            {schools.map((school) => (
+              <a
+                href={`/esports/${school.slug}`}
+                class="card hover:border-brand-orange transition-all no-underline group"
+              >
+                <h3 class="text-2xl font-bold text-brand-white mb-2 group-hover:text-brand-orange transition-colors">
+                  {school.name}
+                </h3>
+                <p class="text-brand-orange font-semibold mb-3">{school.mascot}</p>
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-brand-gray text-sm">School Colors:</span>
+                  {school.colors.map((color) => (
+                    <span class="text-brand-white text-sm">{color}</span>
+                  ))}
+                </div>
+                <div class="flex items-center text-brand-orange font-semibold">
+                  View eSports Info
+                  <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organizations Section -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-brand-white text-center">eSports Organizations</h2>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            {organizations.map((org) => (
+              <a
+                href={`/esports/${org.slug}`}
+                class="card hover:border-brand-purple transition-all no-underline group"
+              >
+                <h3 class="text-2xl font-bold text-brand-white mb-2 group-hover:text-brand-purple transition-colors">
+                  {org.name}
+                </h3>
+                <p class="text-brand-purple font-semibold mb-3">{org.fullName}</p>
+                <p class="text-brand-gray mb-4">{org.description}</p>
+                <div class="flex items-center text-brand-purple font-semibold">
+                  Learn More
+                  <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="card bg-gradient-to-r from-brand-orange/10 via-brand-purple/10 to-brand-cyan/10 border-brand-orange/30">
+            <div class="text-center">
+              <h2 class="text-3xl font-bold mb-6 text-brand-white">
+                How Gladiator Games Supports High School eSports
+              </h2>
+              <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div>
+                  <div class="w-12 h-12 bg-brand-orange/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                    <svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-brand-white mb-2">Tournament Venue</h3>
+                  <p class="text-brand-gray text-sm">
+                    Professional-grade equipment and space for hosting high school esports tournaments
+                  </p>
+                </div>
+                <div>
+                  <div class="w-12 h-12 bg-brand-purple/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                    <svg class="w-6 h-6 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-brand-white mb-2">Team Practice</h3>
+                  <p class="text-brand-gray text-sm">
+                    Dedicated space and equipment for school teams to practice together
+                  </p>
+                </div>
+                <div>
+                  <div class="w-12 h-12 bg-brand-cyan/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                    <svg class="w-6 h-6 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-brand-white mb-2">Coaching Resources</h3>
+                  <p class="text-brand-gray text-sm">
+                    Support and resources for coaches building their esports programs
+                  </p>
+                </div>
+              </div>
+              <a href="/contact" class="btn-primary bg-brand-orange hover:brightness-110">
+                Contact Us About eSports
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6 text-brand-white">
+            Building the Future of High School eSports
+          </h2>
+          <p class="text-xl text-brand-gray mb-8">
+            Partner with Gladiator Games to bring competitive esports opportunities to your school
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" class="btn-primary bg-brand-orange hover:brightness-110">
+              Contact Us
+            </a>
+            <a href="/events" class="btn-primary bg-brand-purple hover:brightness-110">
+              View Tournaments
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Capital City High School eSports - Gladiator Games"
+  description="Capital City High School Cavaliers esports program information in Jefferson City, Missouri."
+>
+  <Header />
+  <main class="bg-brand-black min-h-screen">
+    <section class="py-20 md:py-32 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="mb-6">
+            <span class="text-brand-orange font-bold text-lg">Capital City Cavaliers</span>
+          </div>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 text-brand-white">
+            Capital City High School eSports
+          </h1>
+          <p class="text-xl text-brand-gray mb-8">
+            Home of the Cavaliers esports program
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">School Information</h2>
+              <div class="space-y-3 text-brand-gray">
+                <div><strong class="text-brand-white">School:</strong> Capital City High School</div>
+                <div><strong class="text-brand-white">Mascot:</strong> Cavaliers</div>
+                <div><strong class="text-brand-white">Colors:</strong> Red & White</div>
+                <div>
+                  <strong class="text-brand-white">Location:</strong><br />
+                  Jefferson City, MO
+                </div>
+                <div><strong class="text-brand-white">Note:</strong> For specific contact information, please visit the school's website or contact Jefferson City Schools</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h2 class="text-2xl font-bold mb-4 text-brand-white">Contact Information</h2>
+              <div class="space-y-3 text-brand-gray">
+                <p>For athletic director and esports program information, please contact:</p>
+                <div><strong class="text-brand-white">Jefferson City Schools:</strong> <a href="https://www.jcschools.us" target="_blank" rel="noopener noreferrer" class="text-brand-orange hover:brightness-110 no-underline">jcschools.us</a></div>
+                <div class="mt-4 pt-4 border-t border-brand-gray-dark">
+                  <p class="text-sm">Contact the main office for specific athletic director and esports coordinator information.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="card">
+            <h2 class="text-3xl font-bold mb-6 text-brand-white text-center">eSports Program</h2>
+            <div class="space-y-6 text-brand-gray">
+              <div>
+                <h3 class="text-xl font-bold text-brand-white mb-3">Program Information</h3>
+                <p>For the most current information about Capital City High School's esports program, games played, and participation requirements, please contact the school directly.</p>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-brand-white mb-3">League Affiliations</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <a href="/esports/mosef" class="card bg-brand-black border-brand-orange hover:border-brand-purple transition-colors no-underline">
+                    <h4 class="font-bold text-brand-white mb-2">MOSEF</h4>
+                    <p class="text-sm">Missouri Scholastic eSports Federation</p>
+                  </a>
+                  <a href="/esports/playvs" class="card bg-brand-black border-brand-orange hover:border-brand-purple transition-colors no-underline">
+                    <h4 class="font-bold text-brand-white mb-2">MSHSAA</h4>
+                    <p class="text-sm">Missouri State High School Activities Association</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6 text-brand-white">Support Local High School eSports</h2>
+          <p class="text-xl text-brand-gray mb-8">Learn more about other high school esports programs in the Jefferson City area</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/esports" class="btn-primary bg-brand-orange hover:brightness-110">View All Schools</a>
+            <a href="/contact" class="btn-primary bg-brand-purple hover:brightness-110">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

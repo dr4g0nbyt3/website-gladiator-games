@@ -31,6 +31,7 @@ export const games: Game[] = [
   // Battle Royale & FPS
   { name: "Fortnite", slug: "fortnite", category: "Battle Royale", description: "Drop into epic battles in the world's most popular battle royale game with premium PCs and ultra-smooth gameplay.", localImage: "/images/games/non-steam/fortnite.jpg" },
   { name: "Apex Legends", slug: "apex-legends", category: "Battle Royale", description: "Master your legend and dominate the arena with high-performance gaming setups designed for competitive play.", steamAppId: 1172470 },
+  { name: "Call of Duty: Warzone", slug: "call-of-duty-warzone", category: "Battle Royale", description: "Drop into Verdansk in the free-to-play battle royale from Call of Duty. Compete in MOSEF tournaments and Missouri State esports competitions.", localImage: "/images/games/non-steam/cod-warzone.jpg" },
   { name: "PUBG Battlegrounds", slug: "pubg-battlegrounds", category: "Battle Royale", description: "Experience the original battle royale with maximum settings and zero lag on our premium gaming stations.", steamAppId: 578080 },
   { name: "Counter Strike 2", slug: "counter-strike-2", category: "FPS", description: "Compete in the legendary tactical shooter with pro-level equipment and low-latency connections.", steamAppId: 730 },
   { name: "Valorant", slug: "valorant", category: "FPS", description: "Showcase your tactical prowess in Riot's competitive shooter with high refresh rate monitors and premium peripherals.", localImage: "/images/games/non-steam/valorant.jpg" },
@@ -150,6 +151,14 @@ export const games: Game[] = [
   { name: "Lego Star Wars The Complete Saga", slug: "lego-star-wars", category: "Action", description: "Experience all six Star Wars episodes in charming LEGO form.", steamAppId: 32440 },
   { name: "Lego Harry Potter Years 1-4", slug: "lego-harry-potter-1-4", category: "Action", description: "Relive Harry's first four years at Hogwarts in LEGO form.", steamAppId: 21130 },
   { name: "Lego Harry Potter Years 5-7", slug: "lego-harry-potter-5-7", category: "Action", description: "Complete Harry's journey through his final years at Hogwarts.", steamAppId: 204120 },
+
+  // Card & Strategy Games
+  { name: "Hearthstone", slug: "hearthstone", category: "Card Game", description: "Master the strategic card game from Blizzard. Compete in MOSEF Spring tournaments and build your ultimate deck.", localImage: "/images/games/non-steam/hearthstone.jpg" },
+  { name: "Pokémon Unite", slug: "pokemon-unite", category: "MOBA", description: "Team up in 5v5 Pokémon battles in this free-to-play MOBA. Featured in MOSEF Winter season competitions for all skill levels.", localImage: "/images/games/non-steam/pokemon-unite.jpg" },
+
+  // Nintendo Switch Games
+  { name: "Super Smash Bros. Ultimate", slug: "super-smash-bros-ultimate", category: "Fighting", description: "Battle it out with Nintendo's all-stars in the ultimate fighting game. Compete in MOSEF tournaments across Fall and Spring seasons in solos and crew battles.", localImage: "/images/games/non-steam/smash-ultimate.jpg" },
+  { name: "Mario Kart 8 Deluxe", slug: "mario-kart-8-deluxe", category: "Racing", description: "Race through creative tracks in Nintendo's premier kart racer. Featured in MOSEF Winter tournaments for high school and middle school divisions.", localImage: "/images/games/non-steam/mario-kart-8.jpg" },
 
   // Casual & Other
   { name: "Roblox", slug: "roblox", category: "Sandbox", description: "Create and play millions of user-generated games in the Roblox universe.", localImage: "/images/games/non-steam/roblox.jpg" },

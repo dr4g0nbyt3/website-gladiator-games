@@ -28,7 +28,10 @@
       "Bash(git remote add:*)",
       "Bash(git push:*)",
       "Bash(done)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "WebFetch(domain:www.jeffersoncityjays.com)",
+      "WebFetch(domain:www.mosef.org)",
+      "Bash(git log:*)"
     ],
     "deny": [],
     "ask": []

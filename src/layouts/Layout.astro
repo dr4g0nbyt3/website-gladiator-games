@@ -27,8 +27,8 @@ const socialImage = new URL(image, Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="/images/branding/logo-white.png" />
-    <link rel="apple-touch-icon" href="/images/branding/logo-white.png" />
+    <link rel="icon" type="image/png" href="/favicon.png?v=4" />
+    <link rel="apple-touch-icon" href="/favicon.png?v=4" />
     <meta name="theme-color" content="#000000" />
 
     <!-- Canonical URL -->
@@ -54,6 +54,16 @@ const socialImage = new URL(image, Astro.site);
 
     <!-- Additional head content -->
     <slot name="head" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WTNYN32HKK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WTNYN32HKK');
+    </script>
   </head>
   <body>
     <slot />

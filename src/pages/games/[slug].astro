@@ -28,7 +28,7 @@ const gameImage = getGameImage(game);
   <Header />
   <main class="bg-brand-black min-h-screen">
     <!-- Game Header -->
-    <section class="py-20 md:py-32 bg-gradient-to-b from-brand-gray-dark to-brand-black">
+    <section class="py-20 md:py-32 bg-brand-black">
       <div class="container-custom">
         <div class="max-w-4xl mx-auto">
           <div class="mb-6">
@@ -50,13 +50,13 @@ const gameImage = getGameImage(game);
             </div>
           )}
 
-          <span class="inline-block bg-brand-orange/20 text-brand-orange px-4 py-2 rounded-full text-sm font-semibold mb-4">
+          <span class="inline-block bg-gradient-to-r from-brand-orange/20 to-brand-purple/20 border border-brand-purple text-brand-orange px-4 py-2 rounded-full text-sm font-semibold mb-4">
             {game.category}
           </span>
-          <h1 class="text-4xl md:text-6xl font-bold mb-6 text-brand-white">
+          <h1 class="text-3xl md:text-6xl font-bold mb-6 text-brand-white">
             {game.name}
           </h1>
-          <p class="text-xl text-brand-gray leading-relaxed">
+          <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
             {game.description}
           </p>
         </div>
@@ -124,7 +124,7 @@ const gameImage = getGameImage(game);
     </section>
 
     <!-- Pricing -->
-    <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+    <section class="py-16 bg-brand-black">
       <div class="container-custom">
         <div class="max-w-6xl mx-auto text-center">
           <h2 class="text-3xl font-bold mb-4 text-brand-white">
@@ -258,7 +258,7 @@ const gameImage = getGameImage(game);
     </section>
 
     <!-- Location Info -->
-    <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+    <section class={`py-16 ${relatedGames.length > 0 ? 'bg-brand-black' : 'bg-gradient-to-b from-brand-black to-brand-gray-dark'}`}>
       <div class="container-custom">
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-3xl font-bold mb-6 text-brand-white">
@@ -286,7 +286,7 @@ const gameImage = getGameImage(game);
 
     <!-- Related Games -->
     {relatedGames.length > 0 && (
-      <section class="py-16 bg-gradient-to-b from-brand-gray-dark to-brand-black">
+      <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
         <div class="container-custom">
           <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-8 text-brand-white">

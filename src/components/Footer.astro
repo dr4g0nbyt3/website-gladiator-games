@@ -38,7 +38,13 @@ const getSocialIcon = (icon: string) => {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
       <!-- Contact Info -->
       <div class="lg:col-span-1">
-        <img src="/images/branding/logo-white.png" alt="Gladiator Games" class="h-12 mb-4" />
+        <div class="flex items-center gap-3 mb-4">
+          <img src="/images/branding/logo-white.png" alt="Gladiator Games" class="h-9 md:h-12" />
+          <div class="flex flex-col leading-none items-center">
+            <span class="text-brand-white font-normal text-[0.656rem] md:text-sm uppercase tracking-wide mb-0.5 md:mb-[-0.2rem]">GLADIATOR</span>
+            <span class="text-brand-white font-bold text-[1.069rem] md:text-[1.425rem] uppercase tracking-wide">GAMES</span>
+          </div>
+        </div>
         <p class="text-brand-gray mb-4">
           Uniting gamers to create thriving, meaningful communities
         </p>
@@ -131,6 +137,9 @@ const getSocialIcon = (icon: string) => {
 
     <div class="border-t border-brand-black pt-8 text-center text-brand-gray">
       <p>&copy; {currentYear} Gladiator Games. All rights reserved.</p>
+      <p class="mt-2 text-sm">
+        Website by <a href="https://aibexp.com" target="_blank" rel="noopener noreferrer" class="no-underline hover:brightness-110 transition-colors"><span class="text-brand-orange font-semibold">BXP</span><span class="text-brand-gray"> - Custom Software & Business Growth Solutions</span></a>
+      </p>
     </div>
   </div>
 </footer>

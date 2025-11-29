@@ -1,0 +1,295 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Pricing - Hourly Rates & Memberships | Gladiator Games"
+  description="Flexible gaming options for every budget. Drop-in hourly rates starting at $10 or unlimited monthly memberships from $16. No contracts, cancel anytime."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-brand-black py-16 md:py-24">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-brand-white">
+            Gaming That Fits Your&nbsp;Budget
+          </h1>
+          <p class="text-xl md:text-2xl text-brand-gray mb-8 leading-relaxed">
+            Pay by the hour or unlock unlimited access with a monthly&nbsp;membership
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Walk-In Rates -->
+    <section class="py-16 md:py-24 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-white">
+              Drop-In Gaming
+            </h2>
+            <p class="text-brand-gray text-lg">
+              Perfect for casual visits. No commitment&nbsp;required.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div class="card text-center border-2 border-brand-gray-dark hover:border-brand-orange transition-all">
+              <div class="text-4xl font-bold text-brand-orange mb-2">$10</div>
+              <div class="text-brand-white text-xl font-semibold mb-2">Per Hour</div>
+              <p class="text-brand-gray text-sm">
+                Perfect for quick gaming sessions
+              </p>
+            </div>
+
+            <div class="card text-center border-2 border-brand-orange">
+              <div class="absolute top-0 right-0 bg-brand-orange text-brand-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                BEST VALUE
+              </div>
+              <div class="text-4xl font-bold text-brand-orange mb-2 mt-2">$20</div>
+              <div class="text-brand-white text-xl font-semibold mb-2">4 Hours</div>
+              <p class="text-brand-gray text-sm">
+                Save $20 on a 4-hour pass
+              </p>
+            </div>
+
+            <div class="card text-center border-2 border-brand-gray-dark hover:border-brand-orange transition-all">
+              <div class="text-4xl font-bold text-brand-orange mb-2">$30</div>
+              <div class="text-brand-white text-xl font-semibold mb-2">All Day</div>
+              <p class="text-brand-gray text-sm">
+                Play from open to close
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Monthly Memberships -->
+    <section class="py-16 md:py-24 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-white">
+              Unlimited Monthly&nbsp;Memberships
+            </h2>
+            <p class="text-brand-gray text-lg">
+              Game as much as you want. No long-term contracts. Cancel&nbsp;anytime.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- 16-bit Membership -->
+            <div class="card border-2 border-brand-cyan hover:border-brand-cyan transition-all">
+              <div class="mb-4">
+                <span class="inline-block bg-brand-cyan/20 text-brand-cyan px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                  16-BIT
+                </span>
+                <h3 class="text-2xl font-bold text-brand-white mb-2">Under 16</h3>
+              </div>
+              <div class="mb-6">
+                <div class="text-4xl font-bold text-brand-white mb-1">$16<span class="text-xl text-brand-gray">/mo</span></div>
+                <div class="text-brand-cyan text-sm font-semibold mb-3">or $160/year (save $32!)</div>
+              </div>
+              <div class="space-y-3 mb-6">
+                <div class="flex items-start space-x-2">
+                  <svg class="w-5 h-5 text-brand-cyan flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Unlimited gaming hours</p>
+                </div>
+                <div class="flex items-start space-x-2">
+                  <svg class="w-5 h-5 text-brand-cyan flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-brand-gray text-sm">E-T rated games only</p>
+                </div>
+                <div class="flex items-start space-x-2">
+                  <svg class="w-5 h-5 text-brand-cyan flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Premium gaming PCs</p>
+                </div>
+                <div class="flex items-start space-x-2">
+                  <svg class="w-5 h-5 text-brand-cyan flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-brand-gray text-sm">High-speed internet</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 32-bit Membership -->
+            <div class="relative card border-2 border-brand-orange">
+              <div class="absolute top-0 right-0 bg-brand-orange text-brand-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                MOST POPULAR
+              </div>
+              <div class="mb-4 mt-2">
+                <span class="inline-block bg-brand-orange/20 text-brand-orange px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                  32-BIT
+                </span>
+                <h3 class="text-2xl font-bold text-brand-white mb-2">Standard</h3>
+              </div>
+              <div class="mb-6">
+                <div class="text-4xl font-bold text-brand-white mb-1">$32<span class="text-xl text-brand-gray">/mo</span></div>
+                <div class="text-brand-orange text-sm font-semibold mb-3">or $320/year (save $64!)</div>
+              </div>
+              <div class="space-y-3 mb-6">
+                <div class="flex items-start space-x-2">
+                  <svg class="w-5 h-5 text-brand-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Unlimited gaming hours</p>
+                </div>
+                <div class="flex items-start space-x-2">
+                  <svg class="w-5 h-5 text-brand-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Access to all 100+ games</p>
+                </div>
+                <div class="flex items-start space-x-2">
+                  <svg class="w-5 h-5 text-brand-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Premium gaming PCs</p>
+                </div>
+                <div class="flex items-start space-x-2">
+                  <svg class="w-5 h-5 text-brand-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-brand-gray text-sm">High-speed internet</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 64-bit Membership -->
+            <div class="card border-2 border-brand-purple hover:border-brand-purple transition-all">
+              <div class="mb-4">
+                <span class="inline-block bg-brand-purple/20 text-brand-purple px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                  64-BIT
+                </span>
+                <h3 class="text-2xl font-bold text-brand-white mb-2">Premium</h3>
+              </div>
+              <div class="mb-6">
+                <div class="text-4xl font-bold text-brand-white mb-1">$64<span class="text-xl text-brand-gray">/mo</span></div>
+                <div class="text-brand-purple text-sm font-semibold mb-3">Best for serious gamers</div>
+              </div>
+              <div class="space-y-3 mb-6">
+                <div class="flex items-start space-x-2">
+                  <svg class="w-5 h-5 text-brand-purple flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Everything in 32-bit, plus:</p>
+                </div>
+                <div class="flex items-start space-x-2">
+                  <svg class="w-5 h-5 text-brand-purple flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Bring one guest for free</p>
+                </div>
+                <div class="flex items-start space-x-2">
+                  <svg class="w-5 h-5 text-brand-purple flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Free tournament entry</p>
+                </div>
+                <div class="flex items-start space-x-2">
+                  <svg class="w-5 h-5 text-brand-purple flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-brand-gray text-sm">Stream from our PCs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-8">
+            <p class="text-brand-gray text-sm">
+              <a href="/gift-cards" class="text-brand-orange hover:brightness-110 no-underline font-semibold">Save 2 months with yearly memberships</a> • No contracts • Cancel anytime
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="py-16 md:py-24 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-white">
+              What's Included With Every&nbsp;Visit
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="card text-center">
+              <div class="bg-brand-orange/20 rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-brand-white mb-3">Premium Hardware</h3>
+              <p class="text-brand-gray text-sm">
+                High-end gaming PCs with latest GPUs, 144Hz+ monitors, and pro peripherals
+              </p>
+            </div>
+
+            <div class="card text-center">
+              <div class="bg-brand-purple/20 rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-brand-white mb-3">Ultra-Fast Internet</h3>
+              <p class="text-brand-gray text-sm">
+                Low-latency fiber connection for lag-free competitive gaming
+              </p>
+            </div>
+
+            <div class="card text-center">
+              <div class="bg-brand-cyan/20 rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-brand-white mb-3">100+ Games</h3>
+              <p class="text-brand-gray text-sm">
+                Massive library including Valorant, League, Minecraft, Fortnite, and more
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-b from-brand-black to-brand-gray-dark">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gradient-to-r from-brand-orange/10 via-brand-purple/10 to-brand-cyan/10 rounded-lg p-8 border border-brand-orange/30 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-white mb-4">
+              Ready to Start&nbsp;Gaming?
+            </h2>
+            <p class="text-brand-gray text-lg mb-6">
+              Visit us in person to sign up or drop in for hourly&nbsp;gaming.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" class="btn-primary bg-brand-orange hover:bg-brand-orange-hover text-lg">
+                Visit Us Today
+              </a>
+              <a href="tel:5733381481" class="btn-primary bg-brand-black border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-brand-white text-lg">
+                Call (573) 338-1481
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

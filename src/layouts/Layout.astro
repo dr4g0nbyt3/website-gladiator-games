@@ -27,9 +27,9 @@ const socialImage = new URL(image, Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="/favicon.png?v=4" />
-    <link rel="apple-touch-icon" href="/favicon.png?v=4" />
-    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png?v=10" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png?v=10" />
+    <meta name="theme-color" content="#ff6900" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
@@ -51,6 +51,142 @@ const socialImage = new URL(image, Astro.site);
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
+
+    <!-- Schema.org Structured Data for Rich Results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://gladiatorgames.net/#organization",
+            "name": "Gladiator Games",
+            "alternateName": "Gladiator Games PC Gaming Arena",
+            "url": "https://gladiatorgames.net",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://gladiatorgames.net/images/branding/logo-white.png",
+              "width": 600,
+              "height": 200
+            },
+            "image": "https://gladiatorgames.net/images/branding/logo-white.png",
+            "description": "Premier competitive gaming center in Jefferson City, Missouri. 100+ games, high-performance PCs, tournaments, and community events.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Jefferson City",
+              "addressLocality": "Jefferson City",
+              "addressRegion": "MO",
+              "addressCountry": "US"
+            },
+            "sameAs": [
+              "https://www.facebook.com/gladiatorgamesjc",
+              "https://www.instagram.com/gladiatorgamesjc",
+              "https://discord.gg/gladiatorgames"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Customer Service",
+              "url": "https://gladiatorgames.net/contact"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://gladiatorgames.net/#website",
+            "url": "https://gladiatorgames.net",
+            "name": "Gladiator Games",
+            "publisher": {
+              "@id": "https://gladiatorgames.net/#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://gladiatorgames.net/?s={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://gladiatorgames.net/#sitelinks",
+            "name": "Gladiator Games Main Navigation",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Events & Tournaments",
+                "description": "Upcoming gaming tournaments, LAN parties, and community events at Gladiator Games",
+                "url": "https://gladiatorgames.net/events"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Birthday Parties",
+                "description": "Ultimate gaming birthday parties with high-performance PCs and private rooms",
+                "url": "https://gladiatorgames.net/parties"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Pricing & Memberships",
+                "description": "Affordable gaming memberships starting at $16/month with unlimited playtime",
+                "url": "https://gladiatorgames.net/pricing"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Gift Cards",
+                "description": "Give the gift of gaming with Gladiator Games gift cards",
+                "url": "https://gladiatorgames.net/gift-cards"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Gaming Tools & Resources",
+                "description": "Pro gaming tools, guides, and resources to help you level up your skills",
+                "url": "https://gladiatorgames.net/tools"
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "Visit Us",
+                "description": "Plan your first visit to Jefferson City's premier PC gaming arena",
+                "url": "https://gladiatorgames.net/visit"
+              }
+            ]
+          },
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://gladiatorgames.net/#localbusiness",
+            "name": "Gladiator Games",
+            "image": "https://gladiatorgames.net/images/branding/logo-white.png",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Jefferson City",
+              "addressLocality": "Jefferson City",
+              "addressRegion": "MO",
+              "addressCountry": "US"
+            },
+            "url": "https://gladiatorgames.net",
+            "telephone": "+1-XXX-XXX-XXXX",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "14:00",
+                "closes": "22:00"
+              }
+            ],
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "38.5767",
+              "longitude": "-92.1735"
+            }
+          }
+        ]
+      }
+    </script>
 
     <!-- Additional head content -->
     <slot name="head" />

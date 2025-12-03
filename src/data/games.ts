@@ -29,33 +29,33 @@ export function getGameImage(game: Game): string | null {
 
 export const games: Game[] = [
   // Battle Royale & FPS
-  { name: "Fortnite", slug: "fortnite", category: "Battle Royale", description: "Drop into epic battles in the world's most popular battle royale game with premium PCs and ultra-smooth gameplay.", localImage: "/images/games/non-steam/fortnite.jpg" },
+  { name: "Fortnite", slug: "fortnite", category: "Battle Royale", description: "Drop into epic battles in the world's most popular battle royale game with premium PCs and ultra-smooth gameplay.", localImage: "/images/games/non-steam/fortnite.webp" },
   { name: "Apex Legends", slug: "apex-legends", category: "Battle Royale", description: "Master your legend and dominate the arena with high-performance gaming setups designed for competitive play.", steamAppId: 1172470 },
-  { name: "Call of Duty: Warzone", slug: "call-of-duty-warzone", category: "Battle Royale", description: "Drop into Verdansk in the free-to-play battle royale from Call of Duty. Compete in MOSEF tournaments and Missouri State esports competitions.", localImage: "/images/games/non-steam/cod-warzone.jpg" },
+  { name: "Call of Duty: Warzone", slug: "call-of-duty-warzone", category: "Battle Royale", description: "Drop into Verdansk in the free-to-play battle royale from Call of Duty. Compete in MOSEF tournaments and Missouri State esports competitions.", localImage: "/images/games/non-steam/cod-warzone.webp" },
   { name: "PUBG Battlegrounds", slug: "pubg-battlegrounds", category: "Battle Royale", description: "Experience the original battle royale with maximum settings and zero lag on our premium gaming stations.", steamAppId: 578080 },
   { name: "Counter Strike 2", slug: "counter-strike-2", category: "FPS", description: "Compete in the legendary tactical shooter with pro-level equipment and low-latency connections.", steamAppId: 730 },
-  { name: "Valorant", slug: "valorant", category: "FPS", description: "Showcase your tactical prowess in Riot's competitive shooter with high refresh rate monitors and premium peripherals.", localImage: "/images/games/non-steam/valorant.jpg" },
+  { name: "Valorant", slug: "valorant", category: "FPS", description: "Showcase your tactical prowess in Riot's competitive shooter with high refresh rate monitors and premium peripherals.", localImage: "/images/games/non-steam/valorant.webp" },
   { name: "Rainbow Six Siege", slug: "rainbow-six-siege", category: "FPS", description: "Plan and execute tactical operations with crystal-clear visuals and responsive controls.", steamAppId: 359550 },
   { name: "Overwatch 2", slug: "overwatch-2", category: "FPS", description: "Join the fight with your favorite heroes on high-performance gaming rigs built for competitive play.", steamAppId: 2357570 },
   { name: "Team Fortress 2", slug: "team-fortress-2", category: "FPS", description: "Enjoy the classic team-based shooter with smooth performance and a thriving community.", steamAppId: 440 },
-  { name: "Escape from Tarkov", slug: "escape-from-tarkov", category: "FPS", description: "Survive the intense hardcore shooter with the performance you need to stay alive.", localImage: "/images/games/non-steam/escape-from-tarkov.jpg" },
+  { name: "Escape from Tarkov", slug: "escape-from-tarkov", category: "FPS", description: "Survive the intense hardcore shooter with the performance you need to stay alive.", localImage: "/images/games/non-steam/escape-from-tarkov.webp" },
   { name: "FEAR", slug: "fear", category: "FPS", description: "Experience the horror FPS classic with modern hardware for the ultimate scare.", steamAppId: 21090 },
   { name: "FEAR 2", slug: "fear-2", category: "FPS", description: "Continue the terrifying journey with enhanced graphics and smooth gameplay.", steamAppId: 16450 },
   { name: "Helldivers 2", slug: "helldivers-2", category: "Co-op Shooter", description: "Team up for intense co-op action with seamless multiplayer performance.", steamAppId: 553850 },
 
   // MOBA & Strategy
-  { name: "League of Legends", slug: "league-of-legends", category: "MOBA", description: "Climb the ranks in the world's most popular MOBA with tournament-grade setups and coaching available.", localImage: "/images/games/non-steam/league-of-legends.jpg" },
+  { name: "League of Legends", slug: "league-of-legends", category: "MOBA", description: "Climb the ranks in the world's most popular MOBA with tournament-grade setups and coaching available.", localImage: "/images/games/non-steam/league-of-legends.webp" },
   { name: "Dota 2", slug: "dota-2", category: "MOBA", description: "Master the complex MOBA with professional gaming equipment and a competitive community.", steamAppId: 570 },
 
   // MMORPGs & ARPGs
-  { name: "World of Warcraft", slug: "world-of-warcraft", category: "MMORPG", description: "Explore Azeroth with maximum graphics settings and reliable connections for endless adventures.", localImage: "/images/games/non-steam/world-of-warcraft.jpg" },
+  { name: "World of Warcraft", slug: "world-of-warcraft", category: "MMORPG", description: "Explore Azeroth with maximum graphics settings and reliable connections for endless adventures.", localImage: "/images/games/non-steam/world-of-warcraft.webp" },
   { name: "Runescape", slug: "runescape", category: "MMORPG", description: "Quest through Gielinor on premium gaming setups perfect for grinding and bossing.", steamAppId: 1343400 },
   { name: "Old School Runescape", slug: "old-school-runescape", category: "MMORPG", description: "Relive the classic MMORPG experience with modern performance and comfort.", steamAppId: 1343370 },
-  { name: "Ultima Online", slug: "ultima-online", category: "MMORPG", description: "Experience the legendary MMORPG that started it all on our retro-capable systems.", localImage: "/images/games/non-steam/ultima-online.jpg" },
-  { name: "EverQuest", slug: "everquest", category: "MMORPG", description: "Journey through Norrath in the classic MMO that defined a generation.", localImage: "/images/games/non-steam/everquest.jpg" },
-  { name: "EverQuest 2", slug: "everquest-2", category: "MMORPG", description: "Continue your adventures in the expanded world of EverQuest.", localImage: "/images/games/non-steam/everquest-2.jpg" },
+  { name: "Ultima Online", slug: "ultima-online", category: "MMORPG", description: "Experience the legendary MMORPG that started it all on our retro-capable systems.", localImage: "/images/games/non-steam/ultima-online.webp" },
+  { name: "EverQuest", slug: "everquest", category: "MMORPG", description: "Journey through Norrath in the classic MMO that defined a generation.", localImage: "/images/games/non-steam/everquest.webp" },
+  { name: "EverQuest 2", slug: "everquest-2", category: "MMORPG", description: "Continue your adventures in the expanded world of EverQuest.", localImage: "/images/games/non-steam/everquest-2.webp" },
   { name: "Path of Exile", slug: "path-of-exile", category: "ARPG", description: "Delve into the dark action RPG with hardware capable of handling the most intense builds.", steamAppId: 238960 },
-  { name: "Diablo III", slug: "diablo-3", category: "ARPG", description: "Slay demons and hunt for legendary loot with buttery-smooth performance.", localImage: "/images/games/non-steam/diablo-3.jpg" },
+  { name: "Diablo III", slug: "diablo-3", category: "ARPG", description: "Slay demons and hunt for legendary loot with buttery-smooth performance.", localImage: "/images/games/non-steam/diablo-3.webp" },
   { name: "Torchlight 2", slug: "torchlight-2", category: "ARPG", description: "Hack and slash through dungeons in this beloved action RPG.", steamAppId: 200710 },
 
   // RPGs
@@ -89,7 +89,7 @@ export const games: Game[] = [
   // Strategy & Management
   { name: "Civilization VI", slug: "civilization-6", category: "Strategy", description: "Build an empire to stand the test of time in Sid Meier's legendary turn-based strategy game.", steamAppId: 289070 },
   { name: "Age of Empires 2", slug: "age-of-empires-2", category: "Strategy", description: "Command medieval armies in the definitive real-time strategy classic.", steamAppId: 813780 },
-  { name: "Warcraft 3 Reign of Chaos", slug: "warcraft-3", category: "Strategy", description: "Experience Blizzard's legendary RTS that launched a gaming phenomenon.", localImage: "/images/games/non-steam/warcraft-III.jpg" },
+  { name: "Warcraft 3 Reign of Chaos", slug: "warcraft-3", category: "Strategy", description: "Experience Blizzard's legendary RTS that launched a gaming phenomenon.", localImage: "/images/games/non-steam/warcraft-III.webp" },
   { name: "Star Wars Empire at War", slug: "star-wars-empire-at-war", category: "Strategy", description: "Command fleets and armies in epic Star Wars real-time strategy battles.", steamAppId: 32470 },
   { name: "Cities Skylines", slug: "cities-skylines", category: "Simulation", description: "Design and manage your dream city in this comprehensive city-building simulation.", steamAppId: 255710 },
   { name: "Tropico 4", slug: "tropico-4", category: "Strategy", description: "Rule your own island nation as El Presidente in this humorous dictator sim.", steamAppId: 57690 },
@@ -122,7 +122,7 @@ export const games: Game[] = [
   { name: "Chained Together", slug: "chained-together", category: "Co-op", description: "Work together while literally chained to your friends in this challenging platformer.", steamAppId: 2567870 },
   { name: "Pico Park", slug: "pico-park", category: "Co-op", description: "Cooperate with friends in this adorable puzzle-platformer designed for teamwork.", steamAppId: 1509960 },
   { name: "Supermarket Together", slug: "supermarket-together", category: "Co-op", description: "Run a supermarket with friends in this cooperative management simulation.", steamAppId: 2709570 },
-  { name: "RV There Yet?", slug: "rv-there-yet", category: "Co-op", description: "Drive your RV through Mabutts Valley with friends in this hilarious physics-based co-op adventure where teamwork and creativity are key to survival.", localImage: "/images/games/non-steam/rv-there-yet.jpg" },
+  { name: "RV There Yet?", slug: "rv-there-yet", category: "Co-op", description: "Drive your RV through Mabutts Valley with friends in this hilarious physics-based co-op adventure where teamwork and creativity are key to survival.", localImage: "/images/games/non-steam/rv-there-yet.webp" },
   { name: "Cluster Truck", slug: "cluster-truck", category: "Platformer", description: "Jump between moving trucks in this chaotic first-person platformer.", steamAppId: 397950 },
 
   // Space & Sci-Fi
@@ -136,7 +136,7 @@ export const games: Game[] = [
   { name: "Cloudpunk", slug: "cloudpunk", category: "Adventure", description: "Deliver packages in a stunning voxel cyberpunk city as a courier driver.", steamAppId: 746850 },
 
   // Action & Adventure
-  { name: "Marvel Rivals", slug: "marvel-rivals", category: "Action", description: "Battle as your favorite Marvel heroes in this exciting new team-based action game.", localImage: "/images/games/non-steam/marvel-rivals.jpg" },
+  { name: "Marvel Rivals", slug: "marvel-rivals", category: "Action", description: "Battle as your favorite Marvel heroes in this exciting new team-based action game.", localImage: "/images/games/non-steam/marvel-rivals.webp" },
   { name: "The Finals", slug: "the-finals", category: "FPS", description: "Compete in the explosive virtual combat game show with destructible environments.", steamAppId: 2073850 },
   { name: "Warhammer 2 Vermintide", slug: "warhammer-vermintide-2", category: "Action", description: "Fight the Skaven horde in this intense first-person co-op action game.", steamAppId: 552500 },
   { name: "War Thunder", slug: "war-thunder", category: "Action", description: "Command vehicles from WWII to modern day in realistic combat scenarios.", steamAppId: 236390 },
@@ -153,15 +153,15 @@ export const games: Game[] = [
   { name: "Lego Harry Potter Years 5-7", slug: "lego-harry-potter-5-7", category: "Action", description: "Complete Harry's journey through his final years at Hogwarts.", steamAppId: 204120 },
 
   // Card & Strategy Games
-  { name: "Hearthstone", slug: "hearthstone", category: "Card Game", description: "Master the strategic card game from Blizzard. Compete in MOSEF Spring tournaments and build your ultimate deck.", localImage: "/images/games/non-steam/hearthstone.jpg" },
-  { name: "Pokémon Unite", slug: "pokemon-unite", category: "MOBA", description: "Team up in 5v5 Pokémon battles in this free-to-play MOBA. Featured in MOSEF Winter season competitions for all skill levels.", localImage: "/images/games/non-steam/pokemon-unite.jpg" },
+  { name: "Hearthstone", slug: "hearthstone", category: "Card Game", description: "Master the strategic card game from Blizzard. Compete in MOSEF Spring tournaments and build your ultimate deck.", localImage: "/images/games/non-steam/hearthstone.webp" },
+  { name: "Pokémon Unite", slug: "pokemon-unite", category: "MOBA", description: "Team up in 5v5 Pokémon battles in this free-to-play MOBA. Featured in MOSEF Winter season competitions for all skill levels.", localImage: "/images/games/non-steam/pokemon-unite.webp" },
 
   // Nintendo Switch Games
-  { name: "Super Smash Bros. Ultimate", slug: "super-smash-bros-ultimate", category: "Fighting", description: "Battle it out with Nintendo's all-stars in the ultimate fighting game. Compete in MOSEF tournaments across Fall and Spring seasons in solos and crew battles.", localImage: "/images/games/non-steam/smash-ultimate.jpg" },
-  { name: "Mario Kart 8 Deluxe", slug: "mario-kart-8-deluxe", category: "Racing", description: "Race through creative tracks in Nintendo's premier kart racer. Featured in MOSEF Winter tournaments for high school and middle school divisions.", localImage: "/images/games/non-steam/mario-kart-8.jpg" },
+  { name: "Super Smash Bros. Ultimate", slug: "super-smash-bros-ultimate", category: "Fighting", description: "Battle it out with Nintendo's all-stars in the ultimate fighting game. Compete in MOSEF tournaments across Fall and Spring seasons in solos and crew battles.", localImage: "/images/games/non-steam/smash-ultimate.webp" },
+  { name: "Mario Kart 8 Deluxe", slug: "mario-kart-8-deluxe", category: "Racing", description: "Race through creative tracks in Nintendo's premier kart racer. Featured in MOSEF Winter tournaments for high school and middle school divisions.", localImage: "/images/games/non-steam/mario-kart-8.webp" },
 
   // Casual & Other
-  { name: "Roblox", slug: "roblox", category: "Sandbox", description: "Create and play millions of user-generated games in the Roblox universe.", localImage: "/images/games/non-steam/roblox.jpg" },
+  { name: "Roblox", slug: "roblox", category: "Sandbox", description: "Create and play millions of user-generated games in the Roblox universe.", localImage: "/images/games/non-steam/roblox.webp" },
   { name: "Sims 4", slug: "sims-4", category: "Simulation", description: "Create and control people in this life simulation classic with endless possibilities.", steamAppId: 1222670 },
   { name: "12 Labours of Hercules", slug: "12-labours-of-hercules", category: "Puzzle", description: "Complete the legendary tasks in this casual time-management puzzle game.", steamAppId: 342580 },
   { name: "The WereCleaner", slug: "the-were-cleaner", category: "Action", description: "A stealth-comedy game about being a janitor werewolf on the night shift - clean messes and fight your instincts to not kill anyone.", steamAppId: 2795000 },

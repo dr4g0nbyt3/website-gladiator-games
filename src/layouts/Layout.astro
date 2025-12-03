@@ -198,7 +198,10 @@ const socialImage = new URL(image, Astro.site);
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-WTNYN32HKK');
+      gtag('config', 'G-WTNYN32HKK', {
+        'transport_type': 'beacon',
+        'send_page_view': true
+      });
     </script>
   </head>
   <body>

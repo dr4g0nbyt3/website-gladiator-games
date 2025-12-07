@@ -39,11 +39,10 @@ const partners = [
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
       {partners.map((partner) => {
         const content = (
-          <img
-            src={partner.logo}
+          <img src={partner.logo}
             alt={partner.name}
             class={`w-full h-auto object-contain ${partner.size === 'large' ? 'max-h-48' : 'max-h-40'} filter brightness-100 hover:brightness-110 transition-all`}
-          />
+          loading="eager">
         );
 
         return partner.url ? (

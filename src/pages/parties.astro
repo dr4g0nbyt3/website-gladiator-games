@@ -7,7 +7,7 @@ const partyTypes = [
   {
     title: 'Birthday Parties',
     description: 'Epic gaming birthday parties with unlimited play, private party rooms, and catering options',
-    image: '/images/branding/hero-image.avif',
+    image: '/images/gallery/parties/party-1.webp',
     href: '/parties/birthday',
     icon: 'cake',
   },
@@ -72,11 +72,10 @@ const partyTypes = [
                 class="card hover:border-brand-orange transition-all duration-300 no-underline group"
               >
                 <div class="aspect-video w-full overflow-hidden rounded-lg bg-brand-gray-dark flex items-center justify-center mb-4">
-                  <img
-                    src={party.image}
+                  <img src={party.image}
                     alt={party.title}
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-50"
-                  />
+                  loading="lazy">
                 </div>
                 <h3 class="text-2xl font-bold mb-3 text-brand-white group-hover:text-brand-orange transition-colors">
                   {party.title}

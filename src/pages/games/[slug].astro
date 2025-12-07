@@ -42,11 +42,10 @@ const gameImage = getGameImage(game);
 
           {gameImage && (
             <div class="mb-8 rounded-lg overflow-hidden shadow-2xl">
-              <img
-                src={gameImage}
+              <img src={gameImage}
                 alt={game.name}
                 class="w-full"
-              />
+              loading="lazy">
             </div>
           )}
 
@@ -302,8 +301,7 @@ const gameImage = getGameImage(game);
                 >
                   {relatedGameImage ? (
                     <div class="aspect-video w-full overflow-hidden bg-brand-gray-dark flex items-center justify-center">
-                      <img
-                        src={relatedGameImage}
+                      <img src={relatedGameImage}
                         alt={relatedGame.name}
                         class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"

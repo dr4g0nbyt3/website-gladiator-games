@@ -122,6 +122,26 @@ The gaming center also emphasizes supporting other local businesses and creating
 Gladiator Games is currently exploring additional partnerships with local schools, youth organizations, and businesses to expand gaming opportunities throughout Central Missouri.`,
   },
 ];
+
+const mediaCoverage = [
+  {
+    title: 'Get your game on at Gladiator Games',
+    publication: 'Jefferson City News Tribune',
+    date: 'October 26, 2025',
+    datePublished: '2025-10-26',
+    url: 'https://www.newstribune.com/news/2025/oct/26/get-your-game-on-at-gladiator-games/',
+    excerpt: 'The News Tribune features Gladiator Games as Jefferson City\'s premier destination for competitive gaming and community events.',
+  },
+  {
+    title: 'BIZBEAT: Gamers can plug into Gladiator Games',
+    publication: 'Jefferson City News Tribune',
+    date: 'September 24, 2023',
+    datePublished: '2023-09-24',
+    url: 'https://www.newstribune.com/news/2023/sep/24/bizbeat-gamers-can-plug-into-gladiator-games/',
+    excerpt: 'News Tribune\'s BizBeat column announces the opening of Gladiator Games, Jefferson City\'s new gaming center with state-of-the-art technology and community gaming events.',
+  },
+  // Add more media coverage here as you get featured in news outlets
+];
 ---
 
 <Layout
@@ -161,7 +181,7 @@ Gladiator Games is currently exploring additional partnerships with local school
   <Header />
   <main>
     <!-- Hero Section -->
-    <section class="py-20 md:py-32 bg-brand-black">
+    <section class="pt-20 md:pt-32 pb-8 bg-brand-black">
       <div class="container-custom">
         <div class="max-w-4xl mx-auto text-center">
           <h1 class="text-4xl md:text-5xl font-bold mb-6 text-brand-white">
@@ -212,6 +232,62 @@ Gladiator Games is currently exploring additional partnerships with local school
               )}
             </article>
           ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Media Coverage -->
+    <section class="py-16 bg-brand-black">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-4 text-brand-white text-center">
+            In the News
+          </h2>
+          <p class="text-brand-gray text-center mb-12">
+            Recent media coverage and news articles featuring Gladiator Games
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            {mediaCoverage.map((article) => (
+              <a
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card border-2 border-brand-purple/30 hover:border-brand-purple transition-all group no-underline"
+              >
+                <div class="mb-4">
+                  <div class="flex items-center gap-2 mb-3">
+                    <span class="inline-block bg-brand-purple/20 text-brand-purple px-3 py-1 rounded-full text-xs font-semibold">
+                      {article.publication}
+                    </span>
+                    <time datetime={article.datePublished} class="text-brand-gray text-xs">
+                      {article.date}
+                    </time>
+                  </div>
+                  <h3 class="text-xl font-bold text-brand-white mb-3 group-hover:text-brand-purple transition-colors">
+                    {article.title}
+                  </h3>
+                  <p class="text-brand-gray text-sm mb-4">
+                    {article.excerpt}
+                  </p>
+                </div>
+                <div class="flex items-center text-brand-purple text-sm font-semibold group-hover:gap-2 transition-all">
+                  Read Article
+                  <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {mediaCoverage.length === 0 && (
+            <div class="text-center py-12">
+              <p class="text-brand-gray">
+                Check back soon for media coverage and news articles!
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>
